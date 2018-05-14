@@ -1,0 +1,25 @@
+<ion-header></ion-header>
+<ion-content>
+  <ion-searchbar class="alx-search" placeholder="输入查询的维修项目" (click)="goToCategory()"></ion-searchbar>
+  <div class="alx-banner">
+    <img alt="banner" src="/assets/imgs/banner.png" />
+  </div>
+  <ion-slides pager color="basic">
+      <ion-slide>
+          <div class="alx-categories-list">
+              <div class="alx-categories-item" *ngFor="let item of Categories.value" (click)="goToMaintain(item.categoryId)" >
+                  <ion-icon name="ios-{{ item.categoryIcon || 'home' }}-outline"></ion-icon>
+                  <span>{{ item.categoryName }}</span>
+              </div>
+          </div>
+      </ion-slide>
+      <ion-slide>
+          <div class="alx-categories-list">
+              <div class="alx-categories-item" *ngFor="let item of Categories.value" (click)="goToMaintain(item.categoryId)" >
+                <ion-icon name="ios-{{ item.categoryIcon || 'home' }}-outline"></ion-icon>
+                <span>{{ item.categoryName }}</span>
+              </div>
+          </div>
+      </ion-slide>
+  </ion-slides>
+</ion-content>

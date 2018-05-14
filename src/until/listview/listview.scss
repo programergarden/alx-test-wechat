@@ -1,0 +1,84 @@
+alx-listview {
+  font-size: 14px;
+
+  .alx-search {
+    width: 100%;
+  }
+  .alx-search input {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    text-align: center;
+    height: 25px;
+    line-height: 22px;
+  }
+  .alx-searchList {
+    position: absolute;
+    width: 100%;
+  }
+  .alx-listview {
+    display: flex;
+    flex-flow: row nowrap;
+    height:100%;
+  }
+
+  ul.alx-listmenu {
+    width: 24%;
+    max-width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+    height: auto;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-y: scroll;
+  }
+  ul.alx-listmenu::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul.alx-listmenu > li {
+    padding: 6px 8px;
+    height: 45px;
+    line-height: 3.333rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .alx-listmenu > li.active {
+    border-left:2px solid #ea5414;
+    background:#ffffff;
+  }
+
+  .alx-listmain {
+    flex: 5;
+    padding: 10px 15px;
+  }
+  .alx-categories-banner img{
+    width: 100%;
+    height: 80px
+  }
+  .alx-categories-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .alx-categories-list .alx-list-title {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5rem;
+      height: 2rem;
+      width: 100%;
+  }
+  .alx-categories-item {
+      width: 33%;
+      height: 66px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+  }
+  .alx-categories-item ion-icon {
+    font-size: 44px;
+  }
+}

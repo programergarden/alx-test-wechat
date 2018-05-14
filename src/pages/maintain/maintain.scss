@@ -1,0 +1,48 @@
+page-maintain {
+  .alx-maintain-item {
+    border: 1px solid #dfdfdf;
+    display: flex;
+
+
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .alx-maintain-item .alx-maintain-item-label,
+  .alx-maintain-item .alx-maintain-item-name,
+  .alx-maintain-item .alx-maintain-item-title
+  {
+     height: 45px;
+     line-height: 40px;
+  }
+
+  .alx-maintain-item .alx-maintain-item-title,
+  .alx-maintain-item .alx-maintain-item-content{
+    width: 100%;
+    position: relative;
+  }
+
+  .alx-maintain-item-content ion-textarea {
+    margin-top: -10px;
+    border: 1px solid #f3f3f3;
+    width: 100%;
+    height: 260px;
+    color:#383838;
+  }
+  .alx-maintain-item-content ion-textarea textarea {
+    height: 260px;
+  }
+  .alx-maintain-item-content .alx-textarea-tips{
+    position: absolute;
+    bottom:0;
+    right: 0;
+  }
+  .alx-textarea-tips .tips-success {
+      color:#32db64;
+  }
+  .alx-textarea-tips .tips-error {
+      color: #f53d3d;
+  }
+}

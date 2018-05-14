@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar [color]="'basic'">
+    <ion-title>报修预约</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="alx-maintain-item"><div class="alx-maintain-item-label">维修类别</div> <span class="alx-maintain-item-name">电冰箱</span></div>
+  <div class="alx-maintain-item">
+          <div class="alx-maintain-item-label">维修内容</div>
+          <ion-select cancelText="取消" okText="确定" interface="action-sheet">
+            <ion-option>11111111111</ion-option>
+            <ion-option>22222222222</ion-option>
+            <ion-option>33333333333</ion-option>
+            <ion-option>44444444444</ion-option>
+            <ion-option>55555555555</ion-option>
+          </ion-select>
+  </div>
+  <div class="alx-maintain-item">
+    <div class="alx-maintain-item-title">问题描述</div>
+    <div class="alx-maintain-item-content">
+      <ion-textarea autosize="200" (contentCount)="getContentCount($event)" >
+
+      </ion-textarea>
+      <div class="alx-textarea-tips"><span [ngClass]="{'tips-success':contentCount<200,'tips-error':contentCount>=200}">{{ 200-contentCount }}</span>/200</div>
+    </div>
+
+  </div>
+  <ion-footer padding>
+    <button ion-button block color="basic" >确认</button>
+  </ion-footer>
+</ion-content>

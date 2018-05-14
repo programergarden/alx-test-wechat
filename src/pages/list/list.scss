@@ -1,0 +1,31 @@
+page-list {
+  .alx-order-item {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid #d3d3d3;
+    padding: 10px 15px;
+  }
+
+  .alx-order-item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ea5414;
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  .alx-order-item-other {
+    font-size: 12px;
+    width: 50%;
+  }
+
+  .alx-order-item-other span:first-child {
+    color:#969696;
+  }
+
+  .alx-order-item-other span:last-child {
+    font-weight: 400;
+    margin-left: 20px;
+  }
+
+}

@@ -1,0 +1,30 @@
+<ion-content>
+    <div padding>
+       <ion-segment class="segment segment-ios" [(ngModel)]="listType" [color]="'basic'" >
+         <ion-segment-button value="0">
+            进行中
+         </ion-segment-button>
+         <ion-segment-button value="1">
+            已完成
+         </ion-segment-button>
+       </ion-segment>
+    </div>
+  <div [ngSwitch]="listType">
+    <div *ngSwitchCase="'0'">
+        <div class="alx-order-item" *ngFor="let item of DataList">
+          <div class="alx-order-item-name">测试项目11111111111111</div>
+          <div class="alx-order-item-other"><span>分类</span><span>家电，洗衣机</span></div>
+          <div class="alx-order-item-other"><span>报修时间</span><span>2018-03-01</span></div>
+        </div>
+    </div>
+    <ion-list *ngSwitchCase="'1'">
+      <div class="alx-order-item" *ngFor="let item of DataList">
+        <div class="alx-order-item-name">测试项目11111111111111</div>
+        <div class="alx-order-item-other"><span>分类</span><span>家电，洗衣机</span></div>
+        <div class="alx-order-item-other"><span>报修时间</span><span>2018-03-01</span></div>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+

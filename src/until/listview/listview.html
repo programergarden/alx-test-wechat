@@ -1,0 +1,18 @@
+<div class="alx-listview">
+  <ul class="alx-listmenu">
+    <li *ngFor="let item of DataList;index as i;" (click)="categoryChanged(i)" [ngClass]="{'active':i==targetIndex}"> {{ item.categoryName }} </li>
+  </ul>
+  <div class="alx-listmain">
+      <div class="alx-categories-banner">
+        <img src="/assets/imgs/banner.png"  alt="分类图片"/>
+      </div>
+      <div class="alx-categories-list">
+        <div class="alx-list-title">分类列表</div>
+        <div class="alx-categories-item" *ngFor="let child of ChildList">
+          <ion-icon name="{{child.childIcon || 'home'}}"></ion-icon>
+          <span>{{child.childName}}</span>
+        </div>
+      </div>
+  </div>
+</div>
+
