@@ -1,0 +1,1401 @@
+[{
+  "text": "市辖区",
+  "value": "810100",
+  "parentVal": "810000"
+},{
+  "text": "澳门半岛",
+  "value": "820100",
+  "parentVal": "820000"
+},{
+  "text": "离岛",
+  "value": "820200",
+  "parentVal": "820000"
+},{
+  "text": "其他",
+  "value": "820300",
+  "parentVal": "820000"
+},{
+  "text": "其他",
+  "value": "710100",
+  "parentVal": "710000"
+},{
+  "text": "市辖区",
+  "value": "110100",
+  "parentVal": "110000"
+}, {
+  "text": "市辖县",
+  "value": "110200",
+  "parentVal": "110000"
+}, {
+  "text": "市辖区",
+  "value": "120100",
+  "parentVal": "120000"
+}, {
+  "text": "市辖县",
+  "value": "120200",
+  "parentVal": "120000"
+}, {
+  "text": "石家庄市",
+  "value": "130100",
+  "parentVal": "130000"
+}, {
+  "text": "唐山市",
+  "value": "130200",
+  "parentVal": "130000"
+}, {
+  "text": "秦皇岛市",
+  "value": "130300",
+  "parentVal": "130000"
+}, {
+  "text": "邯郸市",
+  "value": "130400",
+  "parentVal": "130000"
+}, {
+  "text": "邢台市",
+  "value": "130500",
+  "parentVal": "130000"
+}, {
+  "text": "保定市",
+  "value": "130600",
+  "parentVal": "130000"
+}, {
+  "text": "张家口市",
+  "value": "130700",
+  "parentVal": "130000"
+}, {
+  "text": "承德市",
+  "value": "130800",
+  "parentVal": "130000"
+}, {
+  "text": "沧州市",
+  "value": "130900",
+  "parentVal": "130000"
+}, {
+  "text": "廊坊市",
+  "value": "131000",
+  "parentVal": "130000"
+}, {
+  "text": "衡水市",
+  "value": "131100",
+  "parentVal": "130000"
+}, {
+  "text": "太原市",
+  "value": "140100",
+  "parentVal": "140000"
+}, {
+  "text": "大同市",
+  "value": "140200",
+  "parentVal": "140000"
+}, {
+  "text": "阳泉市",
+  "value": "140300",
+  "parentVal": "140000"
+}, {
+  "text": "长治市",
+  "value": "140400",
+  "parentVal": "140000"
+}, {
+  "text": "晋城市",
+  "value": "140500",
+  "parentVal": "140000"
+}, {
+  "text": "朔州市",
+  "value": "140600",
+  "parentVal": "140000"
+}, {
+  "text": "晋中市",
+  "value": "140700",
+  "parentVal": "140000"
+}, {
+  "text": "运城市",
+  "value": "140800",
+  "parentVal": "140000"
+}, {
+  "text": "忻州市",
+  "value": "140900",
+  "parentVal": "140000"
+}, {
+  "text": "临汾市",
+  "value": "141000",
+  "parentVal": "140000"
+}, {
+  "text": "吕梁市",
+  "value": "141100",
+  "parentVal": "140000"
+}, {
+  "text": "呼和浩特市",
+  "value": "150100",
+  "parentVal": "150000"
+}, {
+  "text": "包头市",
+  "value": "150200",
+  "parentVal": "150000"
+}, {
+  "text": "乌海市",
+  "value": "150300",
+  "parentVal": "150000"
+}, {
+  "text": "赤峰市",
+  "value": "150400",
+  "parentVal": "150000"
+}, {
+  "text": "通辽市",
+  "value": "150500",
+  "parentVal": "150000"
+}, {
+  "text": "鄂尔多斯市",
+  "value": "150600",
+  "parentVal": "150000"
+}, {
+  "text": "呼伦贝尔市",
+  "value": "150700",
+  "parentVal": "150000"
+}, {
+  "text": "巴彦淖尔市",
+  "value": "150800",
+  "parentVal": "150000"
+}, {
+  "text": "乌兰察布市",
+  "value": "150900",
+  "parentVal": "150000"
+}, {
+  "text": "兴安盟",
+  "value": "152200",
+  "parentVal": "150000"
+}, {
+  "text": "锡林郭勒盟",
+  "value": "152500",
+  "parentVal": "150000"
+}, {
+  "text": "阿拉善盟",
+  "value": "152900",
+  "parentVal": "150000"
+}, {
+  "text": "沈阳市",
+  "value": "210100",
+  "parentVal": "210000"
+}, {
+  "text": "大连市",
+  "value": "210200",
+  "parentVal": "210000"
+}, {
+  "text": "鞍山市",
+  "value": "210300",
+  "parentVal": "210000"
+}, {
+  "text": "抚顺市",
+  "value": "210400",
+  "parentVal": "210000"
+}, {
+  "text": "本溪市",
+  "value": "210500",
+  "parentVal": "210000"
+}, {
+  "text": "丹东市",
+  "value": "210600",
+  "parentVal": "210000"
+}, {
+  "text": "锦州市",
+  "value": "210700",
+  "parentVal": "210000"
+}, {
+  "text": "营口市",
+  "value": "210800",
+  "parentVal": "210000"
+}, {
+  "text": "阜新市",
+  "value": "210900",
+  "parentVal": "210000"
+}, {
+  "text": "辽阳市",
+  "value": "211000",
+  "parentVal": "210000"
+}, {
+  "text": "盘锦市",
+  "value": "211100",
+  "parentVal": "210000"
+}, {
+  "text": "铁岭市",
+  "value": "211200",
+  "parentVal": "210000"
+}, {
+  "text": "朝阳市",
+  "value": "211300",
+  "parentVal": "210000"
+}, {
+  "text": "葫芦岛市",
+  "value": "211400",
+  "parentVal": "210000"
+}, {
+  "text": "长春市",
+  "value": "220100",
+  "parentVal": "220000"
+}, {
+  "text": "吉林市",
+  "value": "220200",
+  "parentVal": "220000"
+}, {
+  "text": "四平市",
+  "value": "220300",
+  "parentVal": "220000"
+}, {
+  "text": "辽源市",
+  "value": "220400",
+  "parentVal": "220000"
+}, {
+  "text": "通化市",
+  "value": "220500",
+  "parentVal": "220000"
+}, {
+  "text": "白山市",
+  "value": "220600",
+  "parentVal": "220000"
+}, {
+  "text": "松原市",
+  "value": "220700",
+  "parentVal": "220000"
+}, {
+  "text": "白城市",
+  "value": "220800",
+  "parentVal": "220000"
+}, {
+  "text": "延边朝鲜族自治州",
+  "value": "222400",
+  "parentVal": "220000"
+}, {
+  "text": "哈尔滨市",
+  "value": "230100",
+  "parentVal": "230000"
+}, {
+  "text": "齐齐哈尔市",
+  "value": "230200",
+  "parentVal": "230000"
+}, {
+  "text": "鸡西市",
+  "value": "230300",
+  "parentVal": "230000"
+}, {
+  "text": "鹤岗市",
+  "value": "230400",
+  "parentVal": "230000"
+}, {
+  "text": "双鸭山市",
+  "value": "230500",
+  "parentVal": "230000"
+}, {
+  "text": "大庆市",
+  "value": "230600",
+  "parentVal": "230000"
+}, {
+  "text": "伊春市",
+  "value": "230700",
+  "parentVal": "230000"
+}, {
+  "text": "佳木斯市",
+  "value": "230800",
+  "parentVal": "230000"
+}, {
+  "text": "七台河市",
+  "value": "230900",
+  "parentVal": "230000"
+}, {
+  "text": "牡丹江市",
+  "value": "231000",
+  "parentVal": "230000"
+}, {
+  "text": "黑河市",
+  "value": "231100",
+  "parentVal": "230000"
+}, {
+  "text": "绥化市",
+  "value": "231200",
+  "parentVal": "230000"
+}, {
+  "text": "大兴安岭地区",
+  "value": "232700",
+  "parentVal": "230000"
+}, {
+  "text": "市辖区",
+  "value": "310100",
+  "parentVal": "310000"
+}, {
+  "text": "市辖县",
+  "value": "310200",
+  "parentVal": "310000"
+}, {
+  "text": "南京市",
+  "value": "320100",
+  "parentVal": "320000"
+}, {
+  "text": "无锡市",
+  "value": "320200",
+  "parentVal": "320000"
+}, {
+  "text": "徐州市",
+  "value": "320300",
+  "parentVal": "320000"
+}, {
+  "text": "常州市",
+  "value": "320400",
+  "parentVal": "320000"
+}, {
+  "text": "苏州市",
+  "value": "320500",
+  "parentVal": "320000"
+}, {
+  "text": "南通市",
+  "value": "320600",
+  "parentVal": "320000"
+}, {
+  "text": "连云港市",
+  "value": "320700",
+  "parentVal": "320000"
+}, {
+  "text": "淮安市",
+  "value": "320800",
+  "parentVal": "320000"
+}, {
+  "text": "盐城市",
+  "value": "320900",
+  "parentVal": "320000"
+}, {
+  "text": "扬州市",
+  "value": "321000",
+  "parentVal": "320000"
+}, {
+  "text": "镇江市",
+  "value": "321100",
+  "parentVal": "320000"
+}, {
+  "text": "泰州市",
+  "value": "321200",
+  "parentVal": "320000"
+}, {
+  "text": "宿迁市",
+  "value": "321300",
+  "parentVal": "320000"
+}, {
+  "text": "杭州市",
+  "value": "330100",
+  "parentVal": "330000"
+}, {
+  "text": "宁波市",
+  "value": "330200",
+  "parentVal": "330000"
+}, {
+  "text": "温州市",
+  "value": "330300",
+  "parentVal": "330000"
+}, {
+  "text": "嘉兴市",
+  "value": "330400",
+  "parentVal": "330000"
+}, {
+  "text": "湖州市",
+  "value": "330500",
+  "parentVal": "330000"
+}, {
+  "text": "绍兴市",
+  "value": "330600",
+  "parentVal": "330000"
+}, {
+  "text": "金华市",
+  "value": "330700",
+  "parentVal": "330000"
+}, {
+  "text": "衢州市",
+  "value": "330800",
+  "parentVal": "330000"
+}, {
+  "text": "舟山市",
+  "value": "330900",
+  "parentVal": "330000"
+}, {
+  "text": "台州市",
+  "value": "331000",
+  "parentVal": "330000"
+}, {
+  "text": "丽水市",
+  "value": "331100",
+  "parentVal": "330000"
+}, {
+  "text": "合肥市",
+  "value": "340100",
+  "parentVal": "340000"
+}, {
+  "text": "芜湖市",
+  "value": "340200",
+  "parentVal": "340000"
+}, {
+  "text": "蚌埠市",
+  "value": "340300",
+  "parentVal": "340000"
+}, {
+  "text": "淮南市",
+  "value": "340400",
+  "parentVal": "340000"
+}, {
+  "text": "马鞍山市",
+  "value": "340500",
+  "parentVal": "340000"
+}, {
+  "text": "淮北市",
+  "value": "340600",
+  "parentVal": "340000"
+}, {
+  "text": "铜陵市",
+  "value": "340700",
+  "parentVal": "340000"
+}, {
+  "text": "安庆市",
+  "value": "340800",
+  "parentVal": "340000"
+}, {
+  "text": "黄山市",
+  "value": "341000",
+  "parentVal": "340000"
+}, {
+  "text": "滁州市",
+  "value": "341100",
+  "parentVal": "340000"
+}, {
+  "text": "阜阳市",
+  "value": "341200",
+  "parentVal": "340000"
+}, {
+  "text": "宿州市",
+  "value": "341300",
+  "parentVal": "340000"
+}, {
+  "text": "六安市",
+  "value": "341500",
+  "parentVal": "340000"
+}, {
+  "text": "亳州市",
+  "value": "341600",
+  "parentVal": "340000"
+}, {
+  "text": "池州市",
+  "value": "341700",
+  "parentVal": "340000"
+}, {
+  "text": "宣城市",
+  "value": "341800",
+  "parentVal": "340000"
+}, {
+  "text": "福州市",
+  "value": "350100",
+  "parentVal": "350000"
+}, {
+  "text": "厦门市",
+  "value": "350200",
+  "parentVal": "350000"
+}, {
+  "text": "莆田市",
+  "value": "350300",
+  "parentVal": "350000"
+}, {
+  "text": "三明市",
+  "value": "350400",
+  "parentVal": "350000"
+}, {
+  "text": "泉州市",
+  "value": "350500",
+  "parentVal": "350000"
+}, {
+  "text": "漳州市",
+  "value": "350600",
+  "parentVal": "350000"
+}, {
+  "text": "南平市",
+  "value": "350700",
+  "parentVal": "350000"
+}, {
+  "text": "龙岩市",
+  "value": "350800",
+  "parentVal": "350000"
+}, {
+  "text": "宁德市",
+  "value": "350900",
+  "parentVal": "350000"
+}, {
+  "text": "南昌市",
+  "value": "360100",
+  "parentVal": "360000"
+}, {
+  "text": "景德镇市",
+  "value": "360200",
+  "parentVal": "360000"
+}, {
+  "text": "萍乡市",
+  "value": "360300",
+  "parentVal": "360000"
+}, {
+  "text": "九江市",
+  "value": "360400",
+  "parentVal": "360000"
+}, {
+  "text": "新余市",
+  "value": "360500",
+  "parentVal": "360000"
+}, {
+  "text": "鹰潭市",
+  "value": "360600",
+  "parentVal": "360000"
+}, {
+  "text": "赣州市",
+  "value": "360700",
+  "parentVal": "360000"
+}, {
+  "text": "吉安市",
+  "value": "360800",
+  "parentVal": "360000"
+}, {
+  "text": "宜春市",
+  "value": "360900",
+  "parentVal": "360000"
+}, {
+  "text": "抚州市",
+  "value": "361000",
+  "parentVal": "360000"
+}, {
+  "text": "上饶市",
+  "value": "361100",
+  "parentVal": "360000"
+}, {
+  "text": "济南市",
+  "value": "370100",
+  "parentVal": "370000"
+}, {
+  "text": "青岛市",
+  "value": "370200",
+  "parentVal": "370000"
+}, {
+  "text": "淄博市",
+  "value": "370300",
+  "parentVal": "370000"
+}, {
+  "text": "枣庄市",
+  "value": "370400",
+  "parentVal": "370000"
+}, {
+  "text": "东营市",
+  "value": "370500",
+  "parentVal": "370000"
+}, {
+  "text": "烟台市",
+  "value": "370600",
+  "parentVal": "370000"
+}, {
+  "text": "潍坊市",
+  "value": "370700",
+  "parentVal": "370000"
+}, {
+  "text": "济宁市",
+  "value": "370800",
+  "parentVal": "370000"
+}, {
+  "text": "泰安市",
+  "value": "370900",
+  "parentVal": "370000"
+}, {
+  "text": "威海市",
+  "value": "371000",
+  "parentVal": "370000"
+}, {
+  "text": "日照市",
+  "value": "371100",
+  "parentVal": "370000"
+}, {
+  "text": "莱芜市",
+  "value": "371200",
+  "parentVal": "370000"
+}, {
+  "text": "临沂市",
+  "value": "371300",
+  "parentVal": "370000"
+}, {
+  "text": "德州市",
+  "value": "371400",
+  "parentVal": "370000"
+}, {
+  "text": "聊城市",
+  "value": "371500",
+  "parentVal": "370000"
+}, {
+  "text": "滨州市",
+  "value": "371600",
+  "parentVal": "370000"
+}, {
+  "text": "菏泽市",
+  "value": "371700",
+  "parentVal": "370000"
+}, {
+  "text": "郑州市",
+  "value": "410100",
+  "parentVal": "410000"
+}, {
+  "text": "开封市",
+  "value": "410200",
+  "parentVal": "410000"
+}, {
+  "text": "洛阳市",
+  "value": "410300",
+  "parentVal": "410000"
+}, {
+  "text": "平顶山市",
+  "value": "410400",
+  "parentVal": "410000"
+}, {
+  "text": "安阳市",
+  "value": "410500",
+  "parentVal": "410000"
+}, {
+  "text": "鹤壁市",
+  "value": "410600",
+  "parentVal": "410000"
+}, {
+  "text": "新乡市",
+  "value": "410700",
+  "parentVal": "410000"
+}, {
+  "text": "焦作市",
+  "value": "410800",
+  "parentVal": "410000"
+}, {
+  "text": "濮阳市",
+  "value": "410900",
+  "parentVal": "410000"
+}, {
+  "text": "许昌市",
+  "value": "411000",
+  "parentVal": "410000"
+}, {
+  "text": "漯河市",
+  "value": "411100",
+  "parentVal": "410000"
+}, {
+  "text": "三门峡市",
+  "value": "411200",
+  "parentVal": "410000"
+}, {
+  "text": "南阳市",
+  "value": "411300",
+  "parentVal": "410000"
+}, {
+  "text": "商丘市",
+  "value": "411400",
+  "parentVal": "410000"
+}, {
+  "text": "信阳市",
+  "value": "411500",
+  "parentVal": "410000"
+}, {
+  "text": "周口市",
+  "value": "411600",
+  "parentVal": "410000"
+}, {
+  "text": "驻马店市",
+  "value": "411700",
+  "parentVal": "410000"
+}, {
+  "text": "省直辖行政区",
+  "value": "419000",
+  "parentVal": "410000"
+}, {
+  "text": "武汉市",
+  "value": "420100",
+  "parentVal": "420000"
+}, {
+  "text": "黄石市",
+  "value": "420200",
+  "parentVal": "420000"
+}, {
+  "text": "十堰市",
+  "value": "420300",
+  "parentVal": "420000"
+}, {
+  "text": "宜昌市",
+  "value": "420500",
+  "parentVal": "420000"
+}, {
+  "text": "襄阳市",
+  "value": "420600",
+  "parentVal": "420000"
+}, {
+  "text": "鄂州市",
+  "value": "420700",
+  "parentVal": "420000"
+}, {
+  "text": "荆门市",
+  "value": "420800",
+  "parentVal": "420000"
+}, {
+  "text": "孝感市",
+  "value": "420900",
+  "parentVal": "420000"
+}, {
+  "text": "荆州市",
+  "value": "421000",
+  "parentVal": "420000"
+}, {
+  "text": "黄冈市",
+  "value": "421100",
+  "parentVal": "420000"
+}, {
+  "text": "咸宁市",
+  "value": "421200",
+  "parentVal": "420000"
+}, {
+  "text": "随州市",
+  "value": "421300",
+  "parentVal": "420000"
+}, {
+  "text": "恩施土家族苗族自治州",
+  "value": "422800",
+  "parentVal": "420000"
+}, {
+  "text": "省直辖行政区",
+  "value": "429000",
+  "parentVal": "420000"
+}, {
+  "text": "长沙市",
+  "value": "430100",
+  "parentVal": "430000"
+}, {
+  "text": "株洲市",
+  "value": "430200",
+  "parentVal": "430000"
+}, {
+  "text": "湘潭市",
+  "value": "430300",
+  "parentVal": "430000"
+}, {
+  "text": "衡阳市",
+  "value": "430400",
+  "parentVal": "430000"
+}, {
+  "text": "邵阳市",
+  "value": "430500",
+  "parentVal": "430000"
+}, {
+  "text": "岳阳市",
+  "value": "430600",
+  "parentVal": "430000"
+}, {
+  "text": "常德市",
+  "value": "430700",
+  "parentVal": "430000"
+}, {
+  "text": "张家界市",
+  "value": "430800",
+  "parentVal": "430000"
+}, {
+  "text": "益阳市",
+  "value": "430900",
+  "parentVal": "430000"
+}, {
+  "text": "郴州市",
+  "value": "431000",
+  "parentVal": "430000"
+}, {
+  "text": "永州市",
+  "value": "431100",
+  "parentVal": "430000"
+}, {
+  "text": "怀化市",
+  "value": "431200",
+  "parentVal": "430000"
+}, {
+  "text": "娄底市",
+  "value": "431300",
+  "parentVal": "430000"
+}, {
+  "text": "湘西土家族苗族自治州",
+  "value": "433100",
+  "parentVal": "430000"
+}, {
+  "text": "广州市",
+  "value": "440100",
+  "parentVal": "440000"
+}, {
+  "text": "韶关市",
+  "value": "440200",
+  "parentVal": "440000"
+}, {
+  "text": "深圳市",
+  "value": "440300",
+  "parentVal": "440000"
+}, {
+  "text": "珠海市",
+  "value": "440400",
+  "parentVal": "440000"
+}, {
+  "text": "汕头市",
+  "value": "440500",
+  "parentVal": "440000"
+}, {
+  "text": "佛山市",
+  "value": "440600",
+  "parentVal": "440000"
+}, {
+  "text": "江门市",
+  "value": "440700",
+  "parentVal": "440000"
+}, {
+  "text": "湛江市",
+  "value": "440800",
+  "parentVal": "440000"
+}, {
+  "text": "茂名市",
+  "value": "440900",
+  "parentVal": "440000"
+}, {
+  "text": "肇庆市",
+  "value": "441200",
+  "parentVal": "440000"
+}, {
+  "text": "惠州市",
+  "value": "441300",
+  "parentVal": "440000"
+}, {
+  "text": "梅州市",
+  "value": "441400",
+  "parentVal": "440000"
+}, {
+  "text": "汕尾市",
+  "value": "441500",
+  "parentVal": "440000"
+}, {
+  "text": "河源市",
+  "value": "441600",
+  "parentVal": "440000"
+}, {
+  "text": "阳江市",
+  "value": "441700",
+  "parentVal": "440000"
+}, {
+  "text": "清远市",
+  "value": "441800",
+  "parentVal": "440000"
+}, {
+  "text": "东莞市",
+  "value": "441900",
+  "parentVal": "440000"
+}, {
+  "text": "中山市",
+  "value": "442000",
+  "parentVal": "440000"
+}, {
+  "text": "潮州市",
+  "value": "445100",
+  "parentVal": "440000"
+}, {
+  "text": "揭阳市",
+  "value": "445200",
+  "parentVal": "440000"
+}, {
+  "text": "云浮市",
+  "value": "445300",
+  "parentVal": "440000"
+}, {
+  "text": "南宁市",
+  "value": "450100",
+  "parentVal": "450000"
+}, {
+  "text": "柳州市",
+  "value": "450200",
+  "parentVal": "450000"
+}, {
+  "text": "桂林市",
+  "value": "450300",
+  "parentVal": "450000"
+}, {
+  "text": "梧州市",
+  "value": "450400",
+  "parentVal": "450000"
+}, {
+  "text": "北海市",
+  "value": "450500",
+  "parentVal": "450000"
+}, {
+  "text": "防城港市",
+  "value": "450600",
+  "parentVal": "450000"
+}, {
+  "text": "钦州市",
+  "value": "450700",
+  "parentVal": "450000"
+}, {
+  "text": "贵港市",
+  "value": "450800",
+  "parentVal": "450000"
+}, {
+  "text": "玉林市",
+  "value": "450900",
+  "parentVal": "450000"
+}, {
+  "text": "百色市",
+  "value": "451000",
+  "parentVal": "450000"
+}, {
+  "text": "贺州市",
+  "value": "451100",
+  "parentVal": "450000"
+}, {
+  "text": "河池市",
+  "value": "451200",
+  "parentVal": "450000"
+}, {
+  "text": "来宾市",
+  "value": "451300",
+  "parentVal": "450000"
+}, {
+  "text": "崇左市",
+  "value": "451400",
+  "parentVal": "450000"
+}, {
+  "text": "海口市",
+  "value": "460100",
+  "parentVal": "460000"
+}, {
+  "text": "三亚市",
+  "value": "460200",
+  "parentVal": "460000"
+}, {
+  "text": "三沙市",
+  "value": "460300",
+  "parentVal": "460000"
+}, {
+  "text": "省直辖行政区",
+  "value": "469000",
+  "parentVal": "460000"
+}, {
+  "text": "市辖区",
+  "value": "500100",
+  "parentVal": "500000"
+}, {
+  "text": "市辖县",
+  "value": "500200",
+  "parentVal": "500000"
+}, {
+  "text": "成都市",
+  "value": "510100",
+  "parentVal": "510000"
+}, {
+  "text": "自贡市",
+  "value": "510300",
+  "parentVal": "510000"
+}, {
+  "text": "攀枝花市",
+  "value": "510400",
+  "parentVal": "510000"
+}, {
+  "text": "泸州市",
+  "value": "510500",
+  "parentVal": "510000"
+}, {
+  "text": "德阳市",
+  "value": "510600",
+  "parentVal": "510000"
+}, {
+  "text": "绵阳市",
+  "value": "510700",
+  "parentVal": "510000"
+}, {
+  "text": "广元市",
+  "value": "510800",
+  "parentVal": "510000"
+}, {
+  "text": "遂宁市",
+  "value": "510900",
+  "parentVal": "510000"
+}, {
+  "text": "内江市",
+  "value": "511000",
+  "parentVal": "510000"
+}, {
+  "text": "乐山市",
+  "value": "511100",
+  "parentVal": "510000"
+}, {
+  "text": "南充市",
+  "value": "511300",
+  "parentVal": "510000"
+}, {
+  "text": "眉山市",
+  "value": "511400",
+  "parentVal": "510000"
+}, {
+  "text": "宜宾市",
+  "value": "511500",
+  "parentVal": "510000"
+}, {
+  "text": "广安市",
+  "value": "511600",
+  "parentVal": "510000"
+}, {
+  "text": "达州市",
+  "value": "511700",
+  "parentVal": "510000"
+}, {
+  "text": "雅安市",
+  "value": "511800",
+  "parentVal": "510000"
+}, {
+  "text": "巴中市",
+  "value": "511900",
+  "parentVal": "510000"
+}, {
+  "text": "资阳市",
+  "value": "512000",
+  "parentVal": "510000"
+}, {
+  "text": "阿坝藏族羌族自治州",
+  "value": "513200",
+  "parentVal": "510000"
+}, {
+  "text": "甘孜藏族自治州",
+  "value": "513300",
+  "parentVal": "510000"
+}, {
+  "text": "凉山彝族自治州",
+  "value": "513400",
+  "parentVal": "510000"
+}, {
+  "text": "贵阳市",
+  "value": "520100",
+  "parentVal": "520000"
+}, {
+  "text": "六盘水市",
+  "value": "520200",
+  "parentVal": "520000"
+}, {
+  "text": "遵义市",
+  "value": "520300",
+  "parentVal": "520000"
+}, {
+  "text": "安顺市",
+  "value": "520400",
+  "parentVal": "520000"
+}, {
+  "text": "毕节市",
+  "value": "520500",
+  "parentVal": "520000"
+}, {
+  "text": "铜仁市",
+  "value": "520600",
+  "parentVal": "520000"
+}, {
+  "text": "黔西南布依族苗族自治州",
+  "value": "522300",
+  "parentVal": "520000"
+}, {
+  "text": "黔东南苗族侗族自治州",
+  "value": "522600",
+  "parentVal": "520000"
+}, {
+  "text": "黔南布依族苗族自治州",
+  "value": "522700",
+  "parentVal": "520000"
+}, {
+  "text": "昆明市",
+  "value": "530100",
+  "parentVal": "530000"
+}, {
+  "text": "曲靖市",
+  "value": "530300",
+  "parentVal": "530000"
+}, {
+  "text": "玉溪市",
+  "value": "530400",
+  "parentVal": "530000"
+}, {
+  "text": "保山市",
+  "value": "530500",
+  "parentVal": "530000"
+}, {
+  "text": "昭通市",
+  "value": "530600",
+  "parentVal": "530000"
+}, {
+  "text": "丽江市",
+  "value": "530700",
+  "parentVal": "530000"
+}, {
+  "text": "普洱市",
+  "value": "530800",
+  "parentVal": "530000"
+}, {
+  "text": "临沧市",
+  "value": "530900",
+  "parentVal": "530000"
+}, {
+  "text": "楚雄彝族自治州",
+  "value": "532300",
+  "parentVal": "530000"
+}, {
+  "text": "红河哈尼族彝族自治州",
+  "value": "532500",
+  "parentVal": "530000"
+}, {
+  "text": "文山壮族苗族自治州",
+  "value": "532600",
+  "parentVal": "530000"
+}, {
+  "text": "西双版纳傣族自治州",
+  "value": "532800",
+  "parentVal": "530000"
+}, {
+  "text": "大理白族自治州",
+  "value": "532900",
+  "parentVal": "530000"
+}, {
+  "text": "德宏傣族景颇族自治州",
+  "value": "533100",
+  "parentVal": "530000"
+}, {
+  "text": "怒江傈僳族自治州",
+  "value": "533300",
+  "parentVal": "530000"
+}, {
+  "text": "迪庆藏族自治州",
+  "value": "533400",
+  "parentVal": "530000"
+}, {
+  "text": "拉萨市",
+  "value": "540100",
+  "parentVal": "540000"
+}, {
+  "text": "昌都地区",
+  "value": "542100",
+  "parentVal": "540000"
+}, {
+  "text": "山南地区",
+  "value": "542200",
+  "parentVal": "540000"
+}, {
+  "text": "日喀则地区",
+  "value": "542300",
+  "parentVal": "540000"
+}, {
+  "text": "那曲地区",
+  "value": "542400",
+  "parentVal": "540000"
+}, {
+  "text": "阿里地区",
+  "value": "542500",
+  "parentVal": "540000"
+}, {
+  "text": "林芝地区",
+  "value": "542600",
+  "parentVal": "540000"
+}, {
+  "text": "西安市",
+  "value": "610100",
+  "parentVal": "610000"
+}, {
+  "text": "铜川市",
+  "value": "610200",
+  "parentVal": "610000"
+}, {
+  "text": "宝鸡市",
+  "value": "610300",
+  "parentVal": "610000"
+}, {
+  "text": "咸阳市",
+  "value": "610400",
+  "parentVal": "610000"
+}, {
+  "text": "渭南市",
+  "value": "610500",
+  "parentVal": "610000"
+}, {
+  "text": "延安市",
+  "value": "610600",
+  "parentVal": "610000"
+}, {
+  "text": "汉中市",
+  "value": "610700",
+  "parentVal": "610000"
+}, {
+  "text": "榆林市",
+  "value": "610800",
+  "parentVal": "610000"
+}, {
+  "text": "安康市",
+  "value": "610900",
+  "parentVal": "610000"
+}, {
+  "text": "商洛市",
+  "value": "611000",
+  "parentVal": "610000"
+}, {
+  "text": "兰州市",
+  "value": "620100",
+  "parentVal": "620000"
+}, {
+  "text": "嘉峪关市",
+  "value": "620200",
+  "parentVal": "620000"
+}, {
+  "text": "金昌市",
+  "value": "620300",
+  "parentVal": "620000"
+}, {
+  "text": "白银市",
+  "value": "620400",
+  "parentVal": "620000"
+}, {
+  "text": "天水市",
+  "value": "620500",
+  "parentVal": "620000"
+}, {
+  "text": "武威市",
+  "value": "620600",
+  "parentVal": "620000"
+}, {
+  "text": "张掖市",
+  "value": "620700",
+  "parentVal": "620000"
+}, {
+  "text": "平凉市",
+  "value": "620800",
+  "parentVal": "620000"
+}, {
+  "text": "酒泉市",
+  "value": "620900",
+  "parentVal": "620000"
+}, {
+  "text": "庆阳市",
+  "value": "621000",
+  "parentVal": "620000"
+}, {
+  "text": "定西市",
+  "value": "621100",
+  "parentVal": "620000"
+}, {
+  "text": "陇南市",
+  "value": "621200",
+  "parentVal": "620000"
+}, {
+  "text": "临夏回族自治州",
+  "value": "622900",
+  "parentVal": "620000"
+}, {
+  "text": "甘南藏族自治州",
+  "value": "623000",
+  "parentVal": "620000"
+}, {
+  "text": "西宁市",
+  "value": "630100",
+  "parentVal": "630000"
+}, {
+  "text": "海东市",
+  "value": "630200",
+  "parentVal": "630000"
+}, {
+  "text": "海北藏族自治州",
+  "value": "632200",
+  "parentVal": "630000"
+}, {
+  "text": "黄南藏族自治州",
+  "value": "632300",
+  "parentVal": "630000"
+}, {
+  "text": "海南藏族自治州",
+  "value": "632500",
+  "parentVal": "630000"
+}, {
+  "text": "果洛藏族自治州",
+  "value": "632600",
+  "parentVal": "630000"
+}, {
+  "text": "玉树藏族自治州",
+  "value": "632700",
+  "parentVal": "630000"
+}, {
+  "text": "海西蒙古族藏族自治州",
+  "value": "632800",
+  "parentVal": "630000"
+}, {
+  "text": "银川市",
+  "value": "640100",
+  "parentVal": "640000"
+}, {
+  "text": "石嘴山市",
+  "value": "640200",
+  "parentVal": "640000"
+}, {
+  "text": "吴忠市",
+  "value": "640300",
+  "parentVal": "640000"
+}, {
+  "text": "固原市",
+  "value": "640400",
+  "parentVal": "640000"
+}, {
+  "text": "中卫市",
+  "value": "640500",
+  "parentVal": "640000"
+}, {
+  "text": "乌鲁木齐市",
+  "value": "650100",
+  "parentVal": "650000"
+}, {
+  "text": "克拉玛依市",
+  "value": "650200",
+  "parentVal": "650000"
+}, {
+  "text": "吐鲁番地区",
+  "value": "652100",
+  "parentVal": "650000"
+}, {
+  "text": "哈密地区",
+  "value": "652200",
+  "parentVal": "650000"
+}, {
+  "text": "昌吉回族自治州",
+  "value": "652300",
+  "parentVal": "650000"
+}, {
+  "text": "博尔塔拉蒙古自治州",
+  "value": "652700",
+  "parentVal": "650000"
+}, {
+  "text": "巴音郭楞蒙古自治州",
+  "value": "652800",
+  "parentVal": "650000"
+}, {
+  "text": "阿克苏地区",
+  "value": "652900",
+  "parentVal": "650000"
+}, {
+  "text": "克孜勒苏柯尔克孜自治州",
+  "value": "653000",
+  "parentVal": "650000"
+}, {
+  "text": "喀什地区",
+  "value": "653100",
+  "parentVal": "650000"
+}, {
+  "text": "和田地区",
+  "value": "653200",
+  "parentVal": "650000"
+}, {
+  "text": "伊犁哈萨克自治州",
+  "value": "654000",
+  "parentVal": "650000"
+}, {
+  "text": "塔城地区",
+  "value": "654200",
+  "parentVal": "650000"
+}, {
+  "text": "阿勒泰地区",
+  "value": "654300",
+  "parentVal": "650000"
+}, {
+  "text": "自治区直辖县级行政区划",
+  "value": "659000",
+  "parentVal": "650000"
+}]

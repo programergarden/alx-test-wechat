@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { App, NavController} from 'ionic-angular';
 import { AutosizetextareaDirective } from "../../until/autosizetextarea/autosizetextarea";
+import { UserinfoComponent } from "../../tools/userinfo/userinfo.component";
 
 @Component({
   selector: 'page-maintain',
@@ -10,11 +11,15 @@ import { AutosizetextareaDirective } from "../../until/autosizetextarea/autosize
 export class MaintainPage {
   contentCount: number = 0;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private appCtrl:App) {
   }
 
   getContentCount(count: number) {
     this.contentCount = count;
+  }
+
+  goToUserInfo() {
+      this.navCtrl.push(UserinfoComponent);
   }
 
 }

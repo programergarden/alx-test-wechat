@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { App, NavController } from 'ionic-angular';
-import { MaintainPage } from "../maintain/maintain";
+import { NavController, NavParams } from 'ionic-angular';
 import { CategoryPage } from "../category/category";
 import { CategoriesService } from "../../services/CategoriesService";
+import { BaseServices } from "../../services/BaseServices";
+import { MessageServices } from "../../services/MessageServices";
 
 @Component({
   selector: 'page-home',
@@ -10,20 +11,32 @@ import { CategoriesService } from "../../services/CategoriesService";
 })
 export class HomePage implements OnInit{
   Categories: any;
-  constructor(public navCtrl: NavController, public appCtrl: App, public categoryService: CategoriesService) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public msg: MessageServices, public categoryService: CategoriesService, public base: BaseServices) {
   }
 
+  ngOnInit() {
+    this.Categories = this.categoryService.getCategories();
+    this.Auth2Login();
+  }
   goToMaintain() {
-    this.appCtrl.getRootNav().push(MaintainPage);
+
   }
 
   goToCategory() {
     this.navCtrl.push(CategoryPage);
   }
 
-  ngOnInit() {
-    this.Categories = this.categoryService.getCategories();
+  Auth2Login(){
+      let code = this.navParams.get('code');
+      if(code && code.trim()!= '') {
+          this.base.WeChatLogin(code).subscribe(item => {
+            console.log(item);
+          }, error => {
+            console.log(error);
+          });
+      }
+      else {
+        this.msg.alert('error','未获取到用户信息');
+      }
   }
-
 }

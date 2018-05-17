@@ -1,0 +1,26 @@
+<div class="address-picker-content" *ngIf="!AreaHide">
+  <ion-avatar>
+    <button item-start ion-button small clear color="basic" (click)="cancel()">{{ cancelText || 'CANCEL'}}</button>
+    <button item-end ion-button small clear color="basic" (click)="ok()">{{ okText || 'OK'}}</button>
+  </ion-avatar>
+  <ion-segment [(ngModel)]="currentLevel" color="basic">
+     <ion-segment-button value="0" (ionSelect)="levelChange($event)" *ngIf="0< AreaLevel" class="active">{{ getCurrentName(currentProvince,0)}}</ion-segment-button>
+     <ion-segment-button value="1" (ionSelect)="levelChange($event)" *ngIf="1< AreaLevel">{{ getCurrentName(currentCity,1)}}</ion-segment-button>
+     <ion-segment-button value="2" (ionSelect)="levelChange($event)" *ngIf="2< AreaLevel">{{ getCurrentName(currentDistrict,2)}}</ion-segment-button>
+     <ion-segment-button value="3" (ionSelect)="levelChange($event)" *ngIf="3< AreaLevel">{{ getCurrentName(currentStreet,3)}}</ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="currentLevel" class="cities-list">
+     <ion-list *ngSwitchCase="'0'" radio-group [(ngModel)]="currentProvince" (ionChange)="parentChanged(currentProvince,0)">
+        <ion-item *ngFor="let dataItem of Provinces" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio> </ion-item>
+     </ion-list>
+     <ion-list *ngSwitchCase="'1'" radio-group [(ngModel)]="currentCity" (ionChange)="parentChanged(currentCity,1)">
+       <ion-item *ngFor="let dataItem of Cities" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+     </ion-list>
+     <ion-list *ngSwitchCase="'2'" radio-group [(ngModel)]="currentDistrict" (ionChange)="parentChanged(currentDistrict,2)">
+       <ion-item *ngFor="let dataItem of Districts" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+     </ion-list>
+     <ion-list *ngSwitchCase="'3'" radio-group [(ngModel)]="currentStreet">
+       <ion-item *ngFor="let dataItem of Streets"><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+     </ion-list>
+  </div>
+</div>

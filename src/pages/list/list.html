@@ -1,14 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-segment class="segment segment-ios" [(ngModel)]="listType" [color]="'basic'" >
+        <ion-segment-button value="0">
+          进行中
+        </ion-segment-button>
+        <ion-segment-button value="1">
+          已完成
+        </ion-segment-button>
+      </ion-segment>
+    </ion-navbar>
+</ion-header>
 <ion-content>
-    <div padding>
-       <ion-segment class="segment segment-ios" [(ngModel)]="listType" [color]="'basic'" >
-         <ion-segment-button value="0">
-            进行中
-         </ion-segment-button>
-         <ion-segment-button value="1">
-            已完成
-         </ion-segment-button>
-       </ion-segment>
-    </div>
   <div [ngSwitch]="listType">
     <div *ngSwitchCase="'0'">
         <div class="alx-order-item" *ngFor="let item of DataList">

@@ -1,0 +1,40 @@
+userinfo-page{
+  .alx-users-list{
+
+  }
+  .alx-users-list .alx-users-basic {
+      padding: 0;
+  }
+  .alx-users-list .alx-users-basic,
+  .alx-users-list .alx-users-item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px solid #ea5414;
+  }
+  .alx-users-list ion-avatar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .alx-users-list ion-avatar img{
+      width: 45px;
+      height: 45px;
+  }
+  .alx-users-profile-name,
+  .alx-users-profile-descript {
+      font-size: 12px;
+
+  }
+  .alx-users-profile-name {
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  .alx-users-item-content {
+      flex: 3;
+  }
+}
