@@ -1,15 +1,13 @@
 import { LoadingController, AlertController, ToastController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/toPromise';
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
 export class AppGlobal {
   //缓存key的配置
   static cache: any = {
-    slides: "_dress_slides",
-    categories: "_dress_categories",
-    products: "_dress_products"
+    categories: "_data_categories",
+    wechatopenid: "_data_openid"
   }
   //接口基地址
   static domain = "/webservice"
@@ -42,46 +40,21 @@ export class AppService {
     return str;
   }
 
-  httpGet(url: string, params?: string, callback?: any, loader: boolean = false) {
-    let loading = this.loadingCtrl.create({});
-    if (loader) {
-      loading.present();
-    }
+  httpGet(url: string, params?: string) {
     this.http.get(AppGlobal.domain + url + this.encode(params))
-      .toPromise()
-      .then(res => {
-        var d = res;
-        if (loader) {
-          loading.dismiss();
-        }
-        callback(d == null ? "[]" : d);
-      })
-      .catch(error => {
-        if (loader) {
-          loading.dismiss();
-        }
+      .subscribe(res => {
+        return res;
+      },error => {
         this.handleError(error);
       });
   }
 
-  httpPost(url: string, params?: string, callback?: any, loader: boolean = false) {
-    let loading = this.loadingCtrl.create();
-    if (loader) {
-      loading.present();
-    }
+  httpPost(url: string, params?: string) {
     this.http.post(AppGlobal.domain + url, params)
-      .toPromise()
-      .then(res => {
-        var d = res;
-        if (loader) {
-          loading.dismiss();
-        }
-        callback(d == null ? "[]" : d);
-      }).catch(error => {
-      if (loader) {
-        loading.dismiss();
-      }
-      this.handleError(error);
+      .subscribe(res => {
+        return res;
+      },error => {
+        this.handleError(error);
     });
   }
 
