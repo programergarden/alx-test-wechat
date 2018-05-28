@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar [color]="'basic'">
+    <ion-title>我的报修</ion-title>
+  </ion-navbar>
+  <ion-toolbar padding>
+    <ion-segment class="segment segment-ios" [(ngModel)]="listType" [color]="'basic'">
+      <ion-segment-button value="all">
+        全部
+      </ion-segment-button>
+      <ion-segment-button value="nopay">
+        待付款
+      </ion-segment-button>
+      <ion-segment-button value="having">
+        进行中
+      </ion-segment-button>
+      <ion-segment-button value="finished">
+        已完成
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="listType">
+    <div *ngSwitchCase="'all'">
+        <div class="alx-order-item" *ngFor="let item of DataList" (click)="goToDetails(item)">
+            <div class="alx-order-item-name">报修单号:<span>{{ item.repairOrderNo }}</span></div>
+            <div class="alx-order-item-other">故障类型:<span>{{ item.serviceNameL3 }}</span></div>
+            <div class="alx-order-item-other">预约时间:<span>{{ item.appointmentTimeString }}</span></div>
+            <div class="alx-order-item-other">报修地址:<span>{{ item.addressProvinceString }} {{ item.addressCityString }} {{ item.addressDistrictString }} {{ item.addressDetail }}</span></div>
+        </div>
+        <div class="alx-order-item" *ngIf="!DataList">
+            暂无数据
+        </div>
+    </div>
+    <ion-list *ngSwitchCase="'nopay'">
+      <div class="alx-order-item" *ngFor="let item of DataList" (click)="goToDetails(item)">
+        <div class="alx-order-item-name">报修单号:<span>{{ item.repairOrderNo }}</span></div>
+        <div class="alx-order-item-other">故障类型:<span>{{ item.serviceNameL3 }}</span></div>
+        <div class="alx-order-item-other">预约时间:<span>{{ item.appointmentTimeString }}</span></div>
+        <div class="alx-order-item-other">报修地址:<span>{{ item.addressProvinceString }} {{ item.addressCityString }} {{ item.addressDistrictString }} {{ item.addressDetail }}</span></div>
+      </div>
+      <div class="alx-order-item" *ngIf="!DataList">
+        暂无数据
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'having'">
+      <div class="alx-order-item" *ngFor="let item of DataList" (click)="goToDetails(item)">
+        <div class="alx-order-item-name">报修单号:<span>{{ item.repairOrderNo }}</span></div>
+        <div class="alx-order-item-other">故障类型:<span>{{ item.serviceNameL3 }}</span></div>
+        <div class="alx-order-item-other">预约时间:<span>{{ item.appointmentTimeString }}</span></div>
+        <div class="alx-order-item-other">报修地址:<span>{{ item.addressProvinceString }} {{ item.addressCityString }} {{ item.addressDistrictString }} {{ item.addressDetail }}</span></div>
+      </div>
+      <div class="alx-order-item" *ngIf="!DataList">
+        暂无数据
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'finished'">
+        <div class="alx-order-item" *ngFor="let item of DataList" (click)="goToDetails(item)">
+          <div class="alx-order-item-name">报修单号:<span>{{ item.repairOrderNo }}</span></div>
+          <div class="alx-order-item-other">故障类型:<span>{{ item.serviceNameL3 }}</span></div>
+          <div class="alx-order-item-other">预约时间:<span>{{ item.appointmentTimeString }}</span></div>
+          <div class="alx-order-item-other">报修地址:<span>{{ item.addressProvinceString }} {{ item.addressCityString }} {{ item.addressDistrictString }} {{ item.addressDetail }}</span></div>
+        </div>
+        <div class="alx-order-item" *ngIf="!DataList">
+          暂无数据
+        </div>
+    </ion-list>
+  </div>
+</ion-content>
+

@@ -1,14 +1,17 @@
 <ion-header>
-  <ion-searchbar (ionInput)="filterItem($event)" placeholder="输入查询的维修项目" autocomplete="on"></ion-searchbar>
+  <ion-navbar [color]="'basic'" >
+    <ion-searchbar (ionInput)="filterItem($event)" (ionClear)="filterItem($event)" placeholder="输入查询的维修项目" autocomplete="on" ></ion-searchbar>
+  </ion-navbar>
 </ion-header>
 <ion-content overflow-scroll="false">
-  <alx-listview class="alx-content" [DataList]="dataList.value" *ngIf="!searchData"></alx-listview>
+  <alx-listview class="alx-content" [DataList]="dataList" *ngIf="!searchData" (changed)="goToMaintain($event)"></alx-listview>
   <div class="alx-searchList" *ngIf="searchData">
     <ion-list>
-      <ion-item *ngFor="let searchItem of searchData">{{ searchItem.categoryName }}</ion-item>
+      <ion-item *ngFor="let searchItem of searchData" (click)="goToMaintain(searchItem)">{{ searchItem.serviceName }}</ion-item>
+      <ion-item *ngIf="searchData.length==0" >未找到相关信息</ion-item>
     </ion-list>
-    <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+   <!-- <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
       <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多...">></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
+    </ion-infinite-scroll>-->
   </div>
 </ion-content>

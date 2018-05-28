@@ -1,3 +1,36 @@
 <ion-header>
-  <ion-navbar></ion-navbar>
+  <ion-navbar [color]="'basic'">
+    <ion-title>我的地址</ion-title>
+  </ion-navbar>
 </ion-header>
+<ion-content>
+  <form #contactForm="ngForm" (ngSubmit)="dismiss()">
+    <div class="alx-item">
+      <label for="displayName">联系人</label>
+      <input type="text" id="displayName" name="displayName" [(ngModel)]="order.displayName" required maxlength="20" placeholder="请输入联系人" ngClass="{'error':contact.invalid && (contact.dirty || contact.touched)}" />
+    </div>
+    <div class="alx-item">
+      <label for="customerType">性别</label>
+      <ion-select id="customerType" name="customerType" [(ngModal)]="order.customerType" interface="popover">
+          <ion-option value="1">先生</ion-option>
+          <ion-option value="2">女士</ion-option>
+      </ion-select>
+    </div>
+    <div class="alx-item">
+      <label for="customerPhone">联系电话</label>
+      <input type="text" id="customerPhone" name="customerPhone" class="form-control" [(ngModel)]="order.customerPhone" required  maxlength="11" placeholder="请输入联系电话" ngClass="{'error':phone.invalid && (phone.dirty || phone.touched)}" />
+    </div>
+    <div class="alx-item">
+      <label for="cities">所在城市</label>
+      <alx-address-picker id="cities" name="cities" class="form-control" [level]="'3'" [value]="cities" (valueChanged)="cityChange($event)" placeholder="请选择" ></alx-address-picker>
+    </div>
+    <div class="alx-item">
+      <label for="addressDetail">详细地址</label>
+      <textarea type="text" id="addressDetail" name="addressDetail" class="form-control" [(ngModel)]="order.addressDetail" required  placeholder="请输入乡镇、街道、道路、小区、单元号、楼号、室号等" ngClass="{'error':address.invalid && (address.dirty || address.touched)}"></textarea>
+    </div>
+    <div padding>
+        <button ion-button block color="basic" type="submit">添加</button>
+    </div>
+  </form>
+</ion-content>
+

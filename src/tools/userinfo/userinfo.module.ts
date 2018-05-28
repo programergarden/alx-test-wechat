@@ -1,28 +1,45 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import { UserInfoAddressPage } from "./address/address";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { IonicModule } from "ionic-angular";
+import { UserComponent } from "./userinfo.component";
+import { UserOrdersPage } from "./orders/orders";
+import { UserOrderDetailPage } from "./orders/orderdetail";
+import { UserAddressList } from "./address/addresslist";
+import { UserAddressPage } from "./address/address";
+import { AlxAddressPickerComponent } from "../../until/alxaddresspicker/alxaddresspicker.component";
+
 import { CitiesService } from "../../services/citiesService";
-import {IonicModule} from "ionic-angular";
-import {UserinfoComponent} from "./userinfo.component";
+import { UserProfilePage } from "./profile/userprofile";
 
 @NgModule({
   declarations: [
-      UserInfoAddressPage,
-      UserinfoComponent
+      UserProfilePage,
+      UserOrdersPage,
+      UserOrderDetailPage,
+      UserAddressList,
+      UserAddressPage,
+      UserComponent,
+      AlxAddressPickerComponent
   ],
   imports: [
-    IonicModule.forRoot(UserinfoComponent)
+      IonicModule.forRoot(UserComponent)
   ],
   entryComponents: [
-    UserInfoAddressPage,
-    UserinfoComponent
+      UserProfilePage,
+      UserOrdersPage,
+      UserOrderDetailPage,
+      UserAddressList,
+      UserAddressPage,
+      UserComponent,
+      AlxAddressPickerComponent
   ],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+      CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
-    CitiesService
+      CitiesService
   ],
   exports:[
+      AlxAddressPickerComponent
   ]
 })
 

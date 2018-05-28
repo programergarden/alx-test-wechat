@@ -1,44 +1,43 @@
-<div class="alx-address-picker-select" (click)="AreaHide=!AreaHide">
+<div class="alx-address-picker-select" (click)="close()">
   <!-- Address select area begin -->
-  <div class="alx-address-picker-select-item">
-    <span title="{{getCurrentName(baseProvince,0)}}">{{getCurrentName(baseProvince,0)}}</span>
-    <span title="{{getCurrentName(baseCity,1)}}">{{getCurrentName(baseCity,1)}}</span>
-    <span title="{{getCurrentName(baseDistrict,2)}}">{{getCurrentName(baseDistrict,2)}}</span>
-    <span title="{{getCurrentName(baseStreet,3)}}">{{getCurrentName(baseStreet,3)}}</span>
+  <div class="alx-address-picker-select-item" *ngIf="noData">{{ placeholder }} <ion-icon name="ios-arrow-forward"></ion-icon></div>
+  <div class="alx-address-picker-select-item" *ngIf="!noData">
+    <span *ngIf="0< areaLevel" title="{{getCurrentName(baseProvince,0)}}">{{getCurrentName(baseProvince,0)}}</span>
+    <span *ngIf="1< areaLevel" title="{{getCurrentName(baseCity,1)}}">{{getCurrentName(baseCity,1)}}</span>
+    <span *ngIf="2< areaLevel" title="{{getCurrentName(baseDistrict,2)}}">{{getCurrentName(baseDistrict,2)}}</span>
+    <span *ngIf="3< areaLevel" title="{{getCurrentName(baseStreet,3)}}">{{getCurrentName(baseStreet,3)}}</span>
   </div>
-  <ion-icon name="ios-arrow-forward"></ion-icon>
   <!-- Address select area end -->
 </div>
 <!-- Address show area begin -->
 <!-- Address show background area begin -->
-<div class="alx-address-picker-dialog" *ngIf="!AreaHide">
+<div class="alx-address-picker-dialog" *ngIf="!areaHide">
 </div>
 <!-- Address show background area end -->
 <!-- Address show datalist area begin -->
-<div class="alx-address-picker-content" *ngIf="!AreaHide">
-
+<div class="alx-address-picker-content" *ngIf="!areaHide">
     <div class="alx-address-picker-opt">
-      <ion-icon name="ios-close-outline" (click)="AreaHide=true"></ion-icon>
+      <ion-icon name="ios-close-outline" (click)="areaHide=true"></ion-icon>
     </div>
     <ion-segment [(ngModel)]="currentLevel" color="basic">
-      <ion-segment-button value="0" (ionSelect)="levelChange($event)" *ngIf="0< AreaLevel" class="active">{{ getCurrentName(currentProvince,0)}}</ion-segment-button>
-      <ion-segment-button value="1" (ionSelect)="levelChange($event)" *ngIf="1< AreaLevel">{{ getCurrentName(currentCity,1)}}</ion-segment-button>
-      <ion-segment-button value="2" (ionSelect)="levelChange($event)" *ngIf="2< AreaLevel">{{ getCurrentName(currentDistrict,2)}}</ion-segment-button>
-      <ion-segment-button value="3" (ionSelect)="levelChange($event)" *ngIf="3< AreaLevel">{{ getCurrentName(currentStreet,3)}}</ion-segment-button>
+      <ion-segment-button value="0" (ionSelect)="levelChange($event)" *ngIf="0< areaLevel">{{ getCurrentName(currentProvince,0)}}</ion-segment-button>
+      <ion-segment-button value="1" (ionSelect)="levelChange($event)" *ngIf="1< areaLevel">{{ getCurrentName(currentCity,1)}}</ion-segment-button>
+      <ion-segment-button value="2" (ionSelect)="levelChange($event)" *ngIf="2< areaLevel">{{ getCurrentName(currentDistrict,2)}}</ion-segment-button>
+      <ion-segment-button value="3" (ionSelect)="levelChange($event)" *ngIf="3< areaLevel">{{ getCurrentName(currentStreet,3)}}</ion-segment-button>
     </ion-segment>
 
     <div [ngSwitch]="currentLevel" class="cities-list">
       <ion-list *ngSwitchCase="'0'" radio-group [(ngModel)]="currentProvince" (ionChange)="parentChanged(currentProvince,0)">
-        <ion-item *ngFor="let dataItem of Provinces" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio> </ion-item>
+        <ion-item *ngFor="let dataItem of dataProvinces" ><ion-label>{{dataItem.name}}</ion-label><ion-radio value="{{dataItem.code}}"></ion-radio> </ion-item>
       </ion-list>
       <ion-list *ngSwitchCase="'1'" radio-group [(ngModel)]="currentCity" (ionChange)="parentChanged(currentCity,1)">
-        <ion-item *ngFor="let dataItem of Cities" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+        <ion-item *ngFor="let dataItem of dataCities" ><ion-label>{{dataItem.name}}</ion-label><ion-radio value="{{dataItem.code}}"></ion-radio></ion-item>
       </ion-list>
       <ion-list *ngSwitchCase="'2'" radio-group [(ngModel)]="currentDistrict" (ionChange)="parentChanged(currentDistrict,2)">
-        <ion-item *ngFor="let dataItem of Districts" ><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+        <ion-item *ngFor="let dataItem of dataDistricts" ><ion-label>{{dataItem.name}}</ion-label><ion-radio value="{{dataItem.code}}"></ion-radio></ion-item>
       </ion-list>
       <ion-list *ngSwitchCase="'3'" radio-group [(ngModel)]="currentStreet">
-        <ion-item *ngFor="let dataItem of Streets"><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.value}}"></ion-radio></ion-item>
+        <ion-item *ngFor="let dataItem of dataStreets"><ion-label>{{dataItem.text}}</ion-label><ion-radio value="{{dataItem.code}}"></ion-radio></ion-item>
       </ion-list>
     </div>
   <!-- Address show datalist area end -->

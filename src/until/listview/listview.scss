@@ -41,26 +41,25 @@ alx-listview {
     padding: 6px 8px;
     height: 45px;
     line-height: 3.333rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
   }
 
   .alx-listmenu > li.active {
-    border-left:2px solid #ea5414;
-    background:#ffffff;
+      border-left:2px solid #ea5414;
+      background:#ffffff;
   }
 
   .alx-listmain {
-    flex: 5;
-    padding: 10px 15px;
+      flex: 5;
+      padding: 6px 8px;
   }
   .alx-categories-banner img{
-    width: 100%;
-    height: 80px
+      width: 100%;
   }
   .alx-categories-list {
-    display: flex;
-    flex-flow: row wrap;
+      display: flex;
+      flex-flow: row wrap;
   }
   .alx-categories-list .alx-list-title {
       font-size: 12px;
@@ -79,6 +78,6 @@ alx-listview {
       font-size: 12px;
   }
   .alx-categories-item ion-icon {
-    font-size: 44px;
+      font-size: 44px;
   }
 }

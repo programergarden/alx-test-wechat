@@ -1,26 +1,32 @@
+<ion-header>
+  <ion-navbar [color]="'basic'">
+    <ion-title>报修</ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-content>
-  <div class="alx-maintain-item"><div class="alx-maintain-item-label">维修类别</div> <span class="alx-maintain-item-child">电冰箱</span></div>
-  <div class="alx-maintain-item">
-          <div class="alx-maintain-item-label">维修内容</div>
-        <!--  <ion-select cancelText="取消" okText="确定" interface="action-sheet">
-            <ion-option>11111111111</ion-option>
-            <ion-option>22222222222</ion-option>
-            <ion-option>33333333333</ion-option>
-            <ion-option>44444444444</ion-option>
-            <ion-option>55555555555</ion-option>
-          </ion-select>-->
-  </div>
-  <div class="alx-maintain-item">
-    <div class="alx-maintain-item-title">问题描述</div>
-    <div class="alx-maintain-item-content">
-      <ion-textarea autosize="200" (contentCount)="getContentCount($event)" >
-
-      </ion-textarea>
-      <div class="alx-textarea-tips"><span [ngClass]="{'tips-success':contentCount<200,'tips-error':contentCount>=200}">{{ 200-contentCount }}</span>/200</div>
+  <form #orderForm="ngForm" (ngSubmit)="goToNext()">
+    <div class="alx-maintain-item"><div class="alx-maintain-item-label">维修类别</div> <span class="alx-maintain-item-child">{{parentName}}</span></div>
+    <div class="alx-maintain-item">
+        <div class="alx-maintain-item-label">维修内容</div>
+        <!--<ion-select cancelText="取消" okText="确定" interface="action-sheet" [(ngModel)]="order.serviceCodeL3" [compareWith]="compareFn" required>
+            <ion-option *ngFor="let item of serviceItem" [value]="item.code">{{ item.serviceName }}</ion-option>
+        </ion-select>-->
     </div>
+    <div class="alx-maintain-item">
+        <div class="alx-maintain-item-label">预约时间</div>
+        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [min]="minDate" [max]="maxDate" [(ngModel)]="order.appointmentTimeStart" name="appointmentTimeStart" doneText="确定" cancelText="取消"></ion-datetime>
+    </div>
+    <div class="alx-maintain-item">
+        <div class="alx-maintain-item-title">问题描述</div>
+        <div class="alx-maintain-item-content">
+          <ion-textarea autosize="200" (contentCount)="getContentCount($event)" [(ngModel)]="order.description" name="description">
 
-  </div>
-  <ion-footer padding>
-    <button ion-button block color="basic" (click)="goToUserInfo()">提交</button>
-  </ion-footer>
+          </ion-textarea>
+          <div class="alx-textarea-tips"><span [ngClass]="{'tips-success':contentCount<200,'tips-error':contentCount>=200}">{{ 200-contentCount }}</span>/200</div>
+        </div>
+    </div>
+    <ion-footer>
+        <button ion-button block color="basic" type="submit">报修</button>
+    </ion-footer>
+  </form>
 </ion-content>

@@ -1,21 +1,62 @@
-<ion-header>
-  <ion-navbar color="basic">
-      <ion-title>个人信息</ion-title>
-  </ion-navbar>
-</ion-header>
 <ion-content>
-    <ion-list class="alx-users-list">
-        <div class="alx-users-basic">
-            <ion-avatar>
-              <img src="assets/imgs/icon.png">
-            </ion-avatar>
-            <div class="alx-users-item-content">
-                <h2 class="alx-users-profile-name">Cher</h2>
-                <p class="alx-users-profile-descript">Ugh. As if.</p>
-            </div>
-        </div>
-        <ion-item class="alx-users-item">
+  <div class="alx-users-back"></div>
+  <ion-list class="alx-users-list">
+      <div class="alx-users-basic">
+          <ion-avatar>
+              <img src="{{ user.headimgurl || '/assets/imgs/icon.png'}}">
+          </ion-avatar>
+          <div class="alx-users-item-content">
+              <h2 class="alx-users-profile-name">{{ user.nickname || 'Alxiu Test'}}<ion-icon name="md-{{gender}}" [ngStyle]="{'color':genderColor}"></ion-icon></h2>
+              <p class="alx-users-profile-descript">{{ user.openid || 'alxiu-Test'}}  </p>
+          </div>
+          <div class="alx-buttons">
+            <button ion-button [color]="'basic'" (click)="goToSetting()"><ion-icon name="ios-settings"></ion-icon></button>
+            <div class="alx-button-span"></div>
+          </div>
 
-        </ion-item>
-    </ion-list>
+      </div>
+      <ion-card>
+          <ion-card-content class="card-content card-content-ios alx-ads-panel">
+             <img src="/assets/imgs/banner.png" alt="alxiu" height="100%" width="100%">
+          </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header class="card-header card-header-ios">
+            <ion-icon name="ios-clipboard"></ion-icon>我的订单
+        </ion-card-header>
+        <ion-card-content class="card-content card-content-ios ">
+            <span class="alx-card-order-basic" (click)="goToOrders('nopay')">
+               <ion-icon name="ios-bookmarks"></ion-icon>
+               <span class="alx-card-order-text">待付款</span>
+            </span>
+            <span class="alx-card-order-basic" (click)="goToOrders('having')">
+               <ion-icon name="ios-browsers"></ion-icon>
+               <span class="alx-card-order-text">进行中</span>
+            </span>
+            <span class="alx-card-order-basic" (click)="goToOrders('finished')">
+               <ion-icon name="ios-briefcase"></ion-icon>
+               <span class="alx-card-order-text">已完成</span>
+            </span>
+            <span class="alx-card-order-other" (click)="goToOrders('all')">
+               <ion-icon name="ios-calendar"></ion-icon>
+               <span class="alx-card-order-text">我的报修</span>
+            </span>
+            <span class="alx-card-order-other" (click)="goToService(0)">
+               <ion-icon name="ios-chatboxes"></ion-icon>
+               <span class="alx-card-order-text">退款/售后</span>
+            </span>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+      <ion-card-header class="card-header card-header-ios">
+          <ion-icon name="ios-clipboard"></ion-icon>阿里修服务
+      </ion-card-header>
+      <ion-card-content class="card-content card-content-ios ">
+          <ion-item>
+              <ion-label>客服热线</ion-label>
+              <ion-label color="basic" (click)="callMe()">400-8594-110</ion-label>
+          </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

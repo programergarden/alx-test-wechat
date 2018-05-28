@@ -1,25 +1,42 @@
 <ion-header></ion-header>
 <ion-content>
-  <ion-searchbar class="alx-search" placeholder="输入查询的维修项目" (click)="goToCategory()"></ion-searchbar>
+  <ion-searchbar class="alx-search" placeholder="输入查询的维修项目" (click)="goToCategory()" [color]="'basic'" ></ion-searchbar>
   <div class="alx-banner">
     <img alt="banner" src="/assets/imgs/banner.png" />
   </div>
-  <ion-slides pager color="basic">
-      <ion-slide>
-          <div class="alx-categories-list">
-              <div class="alx-categories-item" *ngFor="let item of Categories.value" (click)="goToMaintain(item.categoryId)" >
-                  <ion-icon name="ios-{{ item.categoryIcon || 'home' }}-outline"></ion-icon>
-                  <span>{{ item.categoryName }}</span>
-              </div>
-          </div>
-      </ion-slide>
-      <ion-slide>
-          <div class="alx-categories-list">
-              <div class="alx-categories-item" *ngFor="let item of Categories.value" (click)="goToMaintain(item.categoryId)" >
-                <ion-icon name="ios-{{ item.categoryIcon || 'home' }}-outline"></ion-icon>
-                <span>{{ item.categoryName }}</span>
-              </div>
-          </div>
+  <!--<div class="alx-categories-list">
+      <div class="alx-categories-item" *ngFor="let item of hots" (click)="goToMaintain(item.serviceCode,item.parentService)" >
+        <ion-icon name="ios-home-outline"></ion-icon>
+      <span>{{ item.serviceName }}</span>
+      </div>
+  </div>-->
+<ion-slides pager color="basic" (ionSlideDidChange)="slideChange()">
+     <ion-slide class="swiper-slide">
+         <div class="alx-categories-list">
+             <div class="alx-categories-item" *ngFor="let item of slideData" (click)="goToMaintain(item)" >
+               <ion-icon name="ios-home-outline"></ion-icon>
+               <span>{{ item.serviceName }}</span>
+             </div>
+             <div class="alx-categories-item" *ngIf="!slideMore" (click)="goToCategory()" >
+               <ion-icon name="ios-apps-outline"></ion-icon>
+               <span>更多</span>
+             </div>
+         </div>
+     </ion-slide>
+     <ion-slide *ngIf="slideMore" class="swiper-slide">
+       <div class="alx-categories-list">
+         <div class="alx-categories-item" *ngFor="let item of slideData" (click)="goToMaintain(item)" >
+           <ion-icon name="ios-home-outline"></ion-icon>
+           <span>{{ item.serviceName }}</span>
+         </div>
+         <div class="alx-categories-item" (click)="goToCategory()" >
+           <ion-icon name="ios-apps-outline"></ion-icon>
+           <span>更多</span>
+         </div>
+       </div>
       </ion-slide>
   </ion-slides>
+<div>
+  <img src="/assets/imgs/categories.png">
+</div>
 </ion-content>

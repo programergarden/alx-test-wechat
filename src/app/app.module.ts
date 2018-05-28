@@ -10,20 +10,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MaintainPage } from '../pages/maintain/maintain';
-import { ListPage } from '../pages/list/list';
 import { CategoryPage } from "../pages/category/category";
-import { MinePage } from '../pages/mine/mine';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AlxListView } from "../until/listview/listview";
 import { CategoriesService } from "../services/CategoriesService";
-import { AutosizetextareaDirective } from "../until/autosizetextarea/autosizetextarea";
 import { UserinfoModule} from "../tools/userinfo/userinfo.module";
 import { HttpClientModule } from "@angular/common/http";
-import { AlxAddressPickerComponent } from "../until/alxaddresspicker/alxaddresspicker.component";
 import { BaseServices } from "../services/BaseServices";
-import { MessageServices } from "../services/MessageServices";
-import { AppService } from "./app.service";
+import { OrdersService } from "../services/OrdersService";
+import { AppGlobal, AppService } from "./app.service";
+import { AutosizetextareaDirective } from "../until/autosizetextarea/autosizetextarea";
 
 registerLocaleData(localeCN,'zh-Hans',localExtraCN);
 
@@ -31,9 +28,6 @@ registerLocaleData(localeCN,'zh-Hans',localExtraCN);
   declarations: [
     MyApp,
     MaintainPage,
-    AlxAddressPickerComponent,
-    ListPage,
-    MinePage,
     CategoryPage,
     HomePage,
     TabsPage,
@@ -45,15 +39,14 @@ registerLocaleData(localeCN,'zh-Hans',localExtraCN);
     FormsModule,
     UserinfoModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+        backButtonText: '返回',
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     MaintainPage,
-    AlxAddressPickerComponent,
-    ListPage,
-    MinePage,
     CategoryPage,
     HomePage,
     TabsPage,
@@ -67,8 +60,9 @@ registerLocaleData(localeCN,'zh-Hans',localExtraCN);
     SplashScreen,
     CategoriesService,
     BaseServices,
-    MessageServices,
+    OrdersService,
     AppService,
+    AppGlobal,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     { provide: LOCALE_ID, useValue:'zh-Hans'}
   ]

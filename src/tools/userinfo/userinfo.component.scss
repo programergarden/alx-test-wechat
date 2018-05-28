@@ -1,6 +1,11 @@
 userinfo-page{
-  .alx-users-list{
 
+  .alx-users-back{
+      position: absolute;
+      background: #ea5414;
+      height: 120px;
+      width: 100%;
+      z-index: -1;
   }
   .alx-users-list .alx-users-basic {
       padding: 0;
@@ -24,17 +29,76 @@ userinfo-page{
       width: 45px;
       height: 45px;
   }
+  .alx-buttons {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+  .alx-buttons button{
+     flex:1;
+  }
+  .alx-buttons .alx-button-span{
+      flex: 3;
+      height: 30px;
+  }
   .alx-users-profile-name,
   .alx-users-profile-descript {
       font-size: 12px;
-
+      color: #ffffff;
+      padding: 6px 12px;
+      margin: 0;
   }
   .alx-users-profile-name {
       font-size: 16px;
       font-weight: 600;
   }
-
+  .alx-users-profile-name ion-icon {
+     padding: 0 10px;
+  }
   .alx-users-item-content {
       flex: 3;
   }
+  .card-header.card-header-ios {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      color: #ea5414;
+      border-bottom: 1px solid #ea5414;
+  }
+  .card-content.card-content-ios {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 12px;
+      color: #ea5414;
+      padding-top: 10px;
+  }
+
+  .alx-card-order-basic,
+  .alx-card-order-other {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .alx-card-order-basic{
+      width: 18%;
+  }
+  .alx-card-order-other{
+      width: 23%;
+  }
+  .alx-card-order-basic ion-icon,
+  .alx-card-order-other ion-icon{
+      font-size: 30px;
+  }
+  .alx-card-order-text {
+      color: #383838;
+  }
+  .card-content.card-content-ios.alx-ads-panel{
+    padding: 0;
+    height: 45px;
+  }
+
 }

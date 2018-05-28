@@ -7,8 +7,8 @@
   },
   "proxies": [
     {
-      "path": "/webService",
-      "proxyUrl": "http://172.28.114.247"
+      "path": "/api",
+      "proxyUrl": "http://172.28.114.246"
     }
   ]
 }
