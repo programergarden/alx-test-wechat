@@ -18,7 +18,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AlxListView } from "../until/listview/listview";
 import { CategoriesService } from "../services/CategoriesService";
-import { UserinfoModule} from "../tools/userinfo/userinfo.module";
+import { UserinfoModule} from "../plus/userinfo/userinfo.module";
 import { HttpClientModule } from "@angular/common/http";
 import { BaseServices } from "../services/BaseServices";
 import { OrdersService } from "../services/OrdersService";

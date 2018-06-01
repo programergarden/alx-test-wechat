@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AutosizetextareaDirective } from "../../until/autosizetextarea/autosizetextarea";
-/*import { UserAddressPage } from "../../tools/userinfo/address/address";*/
+/*import { UserAddressPage } from "../../plus/userinfo/address/address";*/
 import { Order, OrdersService } from "../../services/OrdersService";
 import { AppGlobal, AppService, /*ToastPosition*/} from "../../app/app.service";
 import { CategoryPage } from "../category/category";
-import { UserOrdersPage } from "../../tools/userinfo/orders/orders";
+import { UserOrdersPage } from "../../plus/userinfo/orders/orders";
 import { PayPage } from "../pay/pay";
 import { ConfirmPage } from "../confirm/confirm";
 

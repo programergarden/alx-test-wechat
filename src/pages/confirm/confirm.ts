@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { UserOrderDetailPage } from "../../tools/userinfo/orders/orderdetail";
+import { UserOrderDetailPage } from "../../plus/userinfo/orders/orderdetail";
 import {AppGlobal, AppService} from "../../app/app.service";
 
 @Component({

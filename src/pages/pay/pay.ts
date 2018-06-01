@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import {NavController, NavParams, ViewController} from "ionic-angular";
 import { AppService } from "../../app/app.service";
-import { UserOrdersPage } from "../../tools/userinfo/orders/orders";
+import { UserOrdersPage } from "../../plus/userinfo/orders/orders";
 import {CommonPage} from "../common/common";
 
 @Component({
