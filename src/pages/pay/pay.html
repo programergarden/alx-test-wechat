@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar [color]="'basic'">
+    <ion-title>阿里修支付中心</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="alxiu-wechat-product-list">
+      <ion-card class="alxiu-wechat-product alxiu-wechat-actived">
+        <div><img src="/assets/imgs/categories.png" /><span>上门服务费 29元</span></div>
+      </ion-card>
+  </div>
+  <div class="alxiu-product-price">售价:<span>{{price/100}}</span>元</div>
+
+  <div class="alxiu-buttons">
+    <button ion-button small col-5 color="light" (click)="cancel()">放弃付款</button>
+    <button ion-button small col-5 color="basic" (click)="wechatPay()">立即支付</button>
+  </div>
+</ion-content>
+<ion-footer>
+    <div><span (click)="showDescription()">收费说明</span> | <span (click)="showOrders()">报修记录</span></div>
+    <div>客服热线:<span (click)="appService.callMe()">400-8594-110</span></div>
+</ion-footer>

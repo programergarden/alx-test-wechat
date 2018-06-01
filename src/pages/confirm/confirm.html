@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar [color]="'basic'">
+    <ion-title>阿里修支付中心</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="alx-payinfo-img">
+      <img src="/assets/imgs/repair.png" />
+  </div>
+  <div class="alx-payinfo-message">
+      <span class="alx-payinfo-success">
+          <ion-icon name="ios-checkmark-circle" ></ion-icon>付款<span>成功</span>
+      </span>
+      <span class="alx-payinfo-danger">
+          <ion-icon name="ios-close-circle" ></ion-icon>付款<span>失败</span>
+      </span>
+  </div>
+  <div class="alx-order-item">
+    <div class="alx-order-item-data alx-order-item-name"><span>报修单号:</span><span>wx201805310001</span></div>
+    <div class="alx-order-item-data"><span>故障类型:</span><span>空调不制冷</span></div>
+    <div class="alx-order-item-data"><span>预约时间:</span><span>2018-05-31 18:00</span></div>
+    <div class="alx-order-item-data"><span>报修地址:</span><span>上海市 上海市 杨浦区 测试街道 测试路303号测试小区8单元403室</span></div>
+  </div>
+  <div class="alxiu-buttons" padding>
+    <button ion-button small block color="basic" (click)="showOrder()">查看订单信息</button>
+  </div>
+</ion-content>
+<ion-footer>
+  <div></div>
+  <div>客服热线:<span (click)="appService.callMe()">400-8594-110</span></div>
+</ion-footer>

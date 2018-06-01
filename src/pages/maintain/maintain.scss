@@ -1,29 +1,42 @@
 page-maintain {
   .alx-maintain-item {
-    border: 1px solid #dfdfdf;
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 10px;
+      border: 1px solid #dfdfdf;
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 10px;
+      position: relative;
+  }
+
+  .alx-maintain-item ion-icon {
+      font-size: 2em;
+      padding: 6px 0;
   }
 
   .alx-maintain-item .alx-maintain-item-label
   {
-      height: 45px;
-      line-height: 40px;
       flex:1;
       max-width: 30%;
+      margin: 10px 0;
   }
+
   .alx-maintain-item .alx-maintain-item-child{
       flex:3;
       max-width: 70%;
+      padding: 10px 0;
+      text-align: center;
   }
 
   .alx-maintain-item-title {
-      height: 45px;
-      line-height: 40px;
+      margin: 10px 0;
       flex:100%;
+  }
+  .alx-maintain-item .alx-maintain-item-label ion-icon,
+  .alx-maintain-item-title ion-icon {
+      font-size: 2.2rem;
+      padding: 0;
+      color: #ea5414;
   }
 
   .alx-maintain-item-content{
@@ -46,6 +59,7 @@ page-maintain {
       bottom:0;
       right: 0;
   }
+
   .alx-textarea-tips .tips-success {
       color:#32db64;
   }

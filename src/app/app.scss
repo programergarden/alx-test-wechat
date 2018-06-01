@@ -1,5 +1,65 @@
 // http://ionicframework.com/docs/theming/
+.picker-ios .picker-button,
+.picker-ios .picker-button.activated {
+  color: #ea5414;
+}
+picker-ios .picker-opt {
+/*  color: #ea5414;*/
+}
+.alert-ios .alert-button {
+  color: #ea5414;
+}
 
+.alx-order-item {
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid #d3d3d3;
+  padding: 10px 15px;
+  position: relative;
+}
+.alx-order-status {
+  position: absolute;
+  right: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.alx-order-item-data {
+  font-size: 12px;
+  line-height: 18px;
+  width: 100%;
+  display: flex;
+}
+.alx-order-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ea5414;
+  width:100%;
+}
+.alx-order-item-data.alx-order-item-name span:last-child {
+  color: #ea5414;
+}
+.alx-order-item-data span{
+  white-space: nowrap;
+  margin: 0 5px;
+}
+.alx-order-item-data span:last-child {
+  color:#969696;
+  width: 100%;
+  white-space:pre-wrap;
+}
+
+.alx-order-status-nopay {
+  color: #ea5414;
+}
+.alx-order-status-having {
+  color: #488aff;
+}
+.alx-order-status-finished {
+  color: #32db64;
+}
+.alx-order-status-reject {
+  color: #696969;
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These

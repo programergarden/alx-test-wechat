@@ -1,6 +1,7 @@
-import { LoadingController, AlertController, ToastController } from 'ionic-angular';
 import { Injectable } from '@angular/core';
+import { AlertController, ToastController, ModalController, App } from 'ionic-angular';
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
+import {Product} from "../services/BaseServices";
 
 @Injectable()
 export class AppGlobal {
@@ -16,7 +17,8 @@ export class AppGlobal {
       customer: "_data_customer",
       cities: "_data_cities",
       categories: "_data_categories",
-      hots: '_data_hots'
+      order: "_data_order",
+      hots: "_data_hots"
   }
 
   //接口基地址
@@ -29,12 +31,24 @@ export class AppGlobal {
       cities: '/base/area',
       orders:'/orderService/repairOrder'
   };
+}
 
+export enum ToastPosition {
+    top,
+    bottom,
+    middle
 }
 
 @Injectable()
 export class AppService {
-  constructor(public http: HttpClient, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController) { }
+  public productInfo: Product = {
+    product_id: '20180601001',
+    body: '阿里修-报修预约上门费',
+    detail: '阿里修报修预约上门费，微信预约定金29元',
+    fee_type: 'CNY',
+    total_fee: 2900
+  };
+  constructor(private http: HttpClient,private appCtrl: App, private modalCtrl: ModalController,private alertCtrl: AlertController, private toastCtrl: ToastController) { }
 
   apiPost(url: string,body?: any,searchParams?: HttpParams,xHeaders?: HttpHeaders) {
     if(xHeaders)
@@ -154,16 +168,26 @@ export class AppService {
     }
   }
 
-  toast(message, callback?) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      duration: 2000,
-      dismissOnPageChange: true,
-    });
-    toast.present();
-    if (callback) {
-      callback();
-    }
+  confirm(message ,buttons?){
+      let confirm = this.alertCtrl.create({
+        title: '提示',
+        message: message,
+        buttons: buttons
+      });
+      confirm.present();
+  }
+
+  toast(message,position?,callback?) {
+      let toast = this.toastCtrl.create({
+        message: message,
+        duration: 3000,
+        dismissOnPageChange: true,
+        position: ToastPosition[position]
+      });
+      toast.present();
+      if (callback) {
+        callback();
+      }
   }
 
   setItem(key: string, obj: any) {
@@ -189,4 +213,32 @@ export class AppService {
     }
   }
 
+  router(component,data?) {
+    if(data) {
+      this.appCtrl.getRootNav().push(component,data);
+    }
+    else {
+      this.appCtrl.getRootNav().push(component);
+    }
+  }
+
+  modal(component,data?,opt?,callback?) {
+    let modal = this.modalCtrl.create(component);
+    if(data && opt) {
+      modal = this.modalCtrl.create(component, data, opt);
+    } else {
+      if (data)
+        modal = this.modalCtrl.create(component, data);
+      else
+        modal = this.modalCtrl.create(component, null, opt);
+    }
+    if(callback)  {
+      modal.onDidDismiss(callback)
+    }
+    modal.present();
+  }
+
+  callMe() {
+    window.location.href = "tel://4008594110";
+  }
 }

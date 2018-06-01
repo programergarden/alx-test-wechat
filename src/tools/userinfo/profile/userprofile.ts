@@ -11,4 +11,8 @@ export class UserProfilePage {
     constructor(public navParams: NavParams){
         this.user = this.navParams.get('data');
     }
+
+    goToProfileDetail() {
+
+    }
 }

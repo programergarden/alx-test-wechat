@@ -10,8 +10,5 @@
       <ion-item *ngFor="let searchItem of searchData" (click)="goToMaintain(searchItem)">{{ searchItem.serviceName }}</ion-item>
       <ion-item *ngIf="searchData.length==0" >未找到相关信息</ion-item>
     </ion-list>
-   <!-- <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
-      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多...">></ion-infinite-scroll-content>
-    </ion-infinite-scroll>-->
   </div>
 </ion-content>

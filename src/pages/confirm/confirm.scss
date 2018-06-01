@@ -1,0 +1,51 @@
+page-confirm {
+  .alx-payinfo-img {
+    padding: 2% 25%;
+  }
+
+  .alx-payinfo-message {
+    font-size: 14px;
+    text-align: center;
+    ion-icon {
+      font-size: 45px;
+      margin: 0 10px;
+    }
+    span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+  }
+
+  .alx-payinfo-message .alx-payinfo-success {
+      ion-icon {
+          color:#32db64;
+      }
+      span {
+          color:#32db64;
+      }
+  }
+  .alx-payinfo-message .alx-payinfo-danger {
+     ion-icon {
+       color:#f53d3d;
+     }
+     span {
+       color:#f53d3d;
+     }
+   }
+  .alx-payinfo-message .alx-payinfo-success,
+  .alx-payinfo-message .alx-payinfo-danger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+
+  ion-footer{
+    text-align: center;
+    color: #696969;
+  }
+  ion-footer span{
+    font-weight: 600;
+    color: #ea5414;
+  }
+}

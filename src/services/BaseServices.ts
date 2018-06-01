@@ -38,6 +38,13 @@ export class WechatUser {
   subscribe_time: number;
 }
 
+export class Product {
+    product_id: string;
+    body: string;
+    detail: string;
+    fee_type: string;
+    total_fee: number;
+}
 @Injectable()
 export class BaseServices {
   AppID: string = '';
@@ -47,7 +54,6 @@ export class BaseServices {
   constructor(private http: AppService) {}
 
   WeChatLogin(code: string){
-    //10_DvEtPyefFVLrWVq5XeGBdXiRD9O9IUuBMwFUYUeYU1clFIzNU7_p9eyjRQKXJZTPbMPdiwaiYcyEEZUFOeEXSo0Q3wHl7aTUxRT3WQNp072kTaydGBYZIQrdl_nCbK2LMaFu2tRL0r9nF_L6HWBaACAQFK
     let serviceUrl = AppGlobal.API.authorization + '/customer/weChatLogin';
     let params = new HttpParams().set('code',code);
     this.http.apiPost(serviceUrl,null,params).subscribe(

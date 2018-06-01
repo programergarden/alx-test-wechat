@@ -1,34 +1,50 @@
-import {Component, OnInit} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
-import {UserOrderDetailPage} from "./orderdetail";
-import {AppGlobal, AppService} from "../../../app/app.service";
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { UserOrderDetailPage } from "./orderdetail";
+import { AppService } from "../../../app/app.service";
+import { OrdersService } from "../../../services/OrdersService";
 
 @Component({
   selector: 'page-orders',
   templateUrl: 'orders.html'
 })
-export class UserOrdersPage implements OnInit{
-  listType: any = 'all';
-  Orders: any =[];
+export class UserOrdersPage{
+  listType: any = '0';
   DataList: any = [];
-  constructor(public navCtrl: NavController,public navParam: NavParams, public appService: AppService) {
-  }
-
-  ngOnInit() {
+  hasMore = true;
+  params = {
+      pageNum:0,
+      pageSize:10
+  };
+  constructor(public navCtrl: NavController,public navParam: NavParams, public appService: AppService, public orderService: OrdersService) {
     let status = this.navParam.get('status');
-    if(this.appService.getItem(AppGlobal.cache.orders))
-      this.Orders = this.appService.getItem(AppGlobal.cache.orders);
     if(status) {
-        if('all' != status) {
-          this.listType = status;
-          if(this.Orders){
-              this.DataList = this.Orders.filter(item => item.repairOrderStatus )
-          }
-        }
+      this.listType = status;
     }
   }
 
+
   goToDetails(item: any){
       this.navCtrl.push(UserOrderDetailPage,{ data:item });
+  }
+
+  doInfinite(infiniteScroll) {
+      if(false == this.hasMore){
+          infiniteScroll.complete();
+          return;
+      }
+      else {
+         if('0' !== this.listType){
+           this.params["wechatStatus"] = this.listType;
+         }
+         else {
+            this.DataList = this.orderService.getOrders(this.params);
+         }
+         if(this.DataList) {
+            this.params.pageNum += 1;
+         }else {
+           this.hasMore = false;
+         }
+      }
   }
 }

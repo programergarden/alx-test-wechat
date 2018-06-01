@@ -1,15 +1,42 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { AppGlobal, AppService } from "../../app/app.service";
+import { animate, group, query, style, transition, trigger } from "@angular/animations";
+import { CitiesService } from "../../services/CitiesService";
+
 
 @Component({
   selector: 'alx-address-picker',
-  templateUrl: 'alxaddresspicker.component.html'
+  templateUrl: 'alxaddresspicker.component.html',
+  providers: [ CitiesService ],
+  animations: [
+    trigger('addressAnimation', [
+      transition(":increment", group([
+        query(':enter', [
+          style({ left: '100%' }),
+          animate('0.5s ease-out', style('*'))
+        ]),
+        query(':leave', [
+          animate('0.5s ease-out', style({ left: '-100%' }))
+        ])
+      ])),
+      transition(":decrement", group([
+        query(':enter', [
+          style({ left: '-100%' }),
+          animate('0.5s ease-out', style('*'))
+        ]),
+        query(':leave', [
+          animate('0.5s ease-out', style({ left: '100%' }))
+        ])
+      ]))
+    ])
+  ]
 })
 
 export class AlxAddressPickerComponent implements OnInit {
   @Input('level') areaLevel:number; /* area level 1-4 */
   @Input() placeholder: string = "请选择"; /* placeholder  */
+  @Input('title') addressTitle: string;/* address picker show title */
   @Input('value') currentCities: any; /* current city info {province:'',city:'',district:'',street:'' }*/
+
   @Output('valueChanged') value: EventEmitter<string> = new EventEmitter<string>();/* value change  */
 
   currentProvince: string = ''; /* current province info */
@@ -26,67 +53,112 @@ export class AlxAddressPickerComponent implements OnInit {
   dataCities: any;  /* from cities list filter city data*/
   dataDistricts: any; /* from cities list filter district data*/
   dataStreets: any; /* from cities list filter street data*/
-  areaHide: boolean = true; /* city select area set hide (default:false)*/
+  cityShow: boolean = false; /* city tab show */
+  districtShow: boolean = false; /* district tab show */
+  streetShow: boolean = false; /* street tab show */
   noData: boolean = true;
+  areaHide: boolean = true; /* city select area set hide (default:false)*/
 
-  constructor(public appService: AppService){}
+  constructor(public cityService: CitiesService){
+      this.dataCitiesList = this.cityService.getCities();
+  }
 
   ngOnInit(){
-      if(this.appService.getItem(AppGlobal.cache.cities)) {
-          this.dataCitiesList = this.appService.getItem(AppGlobal.cache.cities);
-          if(this.dataCitiesList && this.dataCitiesList.length > 0) {
-              this.loadProvince();
-              this.loadCities(true);
-              this.loadCities(false);
-          }
+      if(this.dataCitiesList && this.dataCitiesList.length > 0) {
+          this.loadProvince();
           this.dataChange();
       }
   }
 
   /* city level changed */
-  levelChange(en:any) {
-    //console.log(en.value);
+  levelChange(en: any) {
+     this.currentLevel = en.value;
   }
 
   dataChange() {
       if(this.currentCities) {
-          if(this.currentCities['province']['code'])
-            this.noData = false;
+          if(this.currentCities['province']['code']) {
+              this.noData = false;
+              this.baseProvince = this.currentCities['province']['code'];
+              this.baseCity = this.currentCities['city']['code'];
+              this.baseDistrict = this.currentCities['district']['code'];
+              if(this.areaLevel>3) {
+                  this.baseStreet = this.currentCities['street']['code'];
+              }
+          }
       }
   }
   /* parent city change (code:current city code , lvl: current city level) */
-  parentChanged(code: string,lvl: number) {
-      if(lvl == 0){
-          this.currentProvince = code;
-          if(this.currentProvince != this.baseProvince) {
-              this.baseProvince = code;
-              this.loadCities(true);
-          }
+  provinceChanged(event) {
+      this.currentProvince = event;
+      if(this.currentProvince != this.baseProvince) {
+        this.baseProvince = event;
+        if(''!== this.baseProvince) {
+          this.currentCity = '';
+          this.currentDistrict = '';
+          this.currentStreet = '';
+          this.cityShow = true;
+          this.loadCities(true);
+          this.currentLevel = (Number(this.currentLevel) + 1).toString();
+        }
       }
-      if(lvl == 1){
-          this.currentCity = code;
-          if(this.currentCity != this.baseCity) {
-              this.baseCity = code;
+  }
+
+  cityChanged(event) {
+      this.currentCity = event;
+      if(this.currentCity != this.baseCity) {
+          this.baseCity = event;
+          if(''!== this.baseCity) {
+              this.currentDistrict = '';
+              this.currentStreet = '';
+              this.districtShow = true;
               this.loadCities(false);
-          }
-      }
-      if(lvl == 2){
-          this.currentDistrict = code;
-          if(this.currentDistrict != this.baseDistrict) {
-              this.baseDistrict = code;
+              this.currentLevel = (Number(this.currentLevel) + 1).toString();
           }
       }
   }
+
+  districtChanged(event) {
+      this.currentDistrict = event;
+      if(this.currentDistrict != this.baseDistrict) {
+          this.baseDistrict = event;
+          if(this.areaLevel>3) {
+              if (this.baseDistrict !== '') {
+                this.currentStreet = '';
+                this.streetShow = true;
+                this.currentLevel = (Number(this.currentLevel) + 1).toString();
+              }
+          }
+          else {
+              this.changeData();
+          }
+      }
+  }
+
+  streetChanged(event) {
+      this.currentStreet = event;
+      if(this.currentStreet != this.baseStreet) {
+          this.baseStreet = event;
+          if('' !== this.baseStreet) {
+              this.changeData();
+          }
+      }
+  }
+
   /* get current city show name (code:current city code , level: current city level) */
   getCurrentName(code: string,level: number): string{
-      let data = [];
-      if(this.dataCitiesList && this.dataCitiesList.length >0 ) {
-          data = this.dataCitiesList.filter(item => {
-            return item.code === code && item.level === level + 1;
-          });
-      }
+      if(''=== code || ''=== code || 'undefined'=== typeof code) {
+          return '请选择';
+      } else {
+          let data = [];
+          if (this.dataCitiesList && this.dataCitiesList.length > 0) {
+            data = this.dataCitiesList.filter(item => {
+              return item.code === code && item.level === level + 1;
+            });
+          }
 
-      return data.length > 0?data[0]['name']:code;
+          return data.length > 0 ? data[0]['name'] : code;
+      }
   }
 
   /* get all province data */
@@ -94,39 +166,48 @@ export class AlxAddressPickerComponent implements OnInit {
       this.dataProvinces = this.dataCitiesList.filter( item => {
           return item.level === 1;
       });
-      this.baseProvince = this.dataProvinces[0]['code'];
-      this.currentProvince = this.baseProvince;
   }
 
   /* get all city data (isCity: if current not province this set false,else set true) */
   loadCities(isCity: boolean) {
-    if(isCity) {
-      this.dataCities = this.dataCitiesList.filter( item => {
-        return item.level === 2 && item.parent === this.currentProvince;
-      });
-
-      this.baseCity = this.dataCities[0]["code"];
-      this.currentCity = this.baseCity;
-      this.loadCities(false);
-    } else {
-        this.dataDistricts = this.dataCitiesList.filter( item => {
-          return item.level === 3 && item.parent === this.currentCity;
-        });
-
-        this.baseDistrict = this.dataDistricts[0]["code"];
-        this.currentDistrict = this.baseDistrict;
-    }
+      if(isCity) {
+          this.dataCities = this.dataCitiesList.filter( item => {
+              return item.level === 2 && item.parent === this.currentProvince;
+          });
+      } else {
+          this.dataDistricts = this.dataCitiesList.filter( item => {
+            return item.level === 3 && item.parent === this.currentCity;
+          });
+      }
   }
   /* close this show area callback current city data */
-  close() {
-      this.currentCities = {
-          province: { code: this.baseProvince, name: this.getCurrentName(this.baseProvince,0) },
-          city: { code: this.baseCity, name: this.getCurrentName(this.baseCity,1) },
-          district: { code: this.baseDistrict, name: this.getCurrentName(this.baseDistrict,2) },
-          street: { code: this.baseStreet, name: this.getCurrentName(this.baseStreet,3) }
-      };
-      this.dataChange();
-      this.value.emit(this.currentCities);
-      this.areaHide = false;
+  changeData() {
+      if(this.currentProvince && '' !== this.currentProvince
+        && this.currentCity  && '' !== this.currentCity
+        && this.currentDistrict  && '' !== this.currentDistrict) {
+          this.currentCities = {
+              province: {code: this.currentProvince, name: this.getCurrentName(this.currentProvince, 0)},
+              city: {code: this.currentCity, name: this.getCurrentName(this.currentCity, 1)},
+              district: {code: this.currentDistrict, name: this.getCurrentName(this.currentDistrict, 2)}
+          };
+          if(this.areaLevel> 3 && this.currentStreet && '' !== this.currentStreet) {
+              this.currentCities['street'] = {code: this.baseStreet, name: this.getCurrentName(this.baseStreet, 3)};
+          }
+          this.dataChange();
+          this.value.emit(this.currentCities);
+          this.currentLevel = '0';
+          this.areaHide = true;
+      }
+  }
+
+  swipeEvent(event){
+      if(event.direction == 2) {
+          if(Number(this.currentLevel)>0)
+            this.currentLevel = (Number(this.currentLevel)-1).toString();
+      }
+      if(event.direction == 4) {
+        if(Number(this.currentLevel) < (this.areaLevel-1))
+          this.currentLevel = (Number(this.currentLevel)+1).toString();
+      }
   }
 }

@@ -5,19 +5,24 @@
 </ion-header>
 <ion-content>
   <form #orderForm="ngForm" (ngSubmit)="goToNext()">
-    <div class="alx-maintain-item"><div class="alx-maintain-item-label">维修类别</div> <span class="alx-maintain-item-child">{{parentName}}</span></div>
+    <div class="alx-maintain-item" (click)="goToCategory()">
+        <div class="alx-maintain-item-label"> <ion-icon name="md-apps" item-start></ion-icon>维修类别</div>
+        <span class="alx-maintain-item-child">{{ parentName || '无'}} ，{{ dataItem.serviceName }}</span>
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </div>
     <div class="alx-maintain-item">
-        <div class="alx-maintain-item-label">维修内容</div>
-        <!--<ion-select cancelText="取消" okText="确定" interface="action-sheet" [(ngModel)]="order.serviceCodeL3" [compareWith]="compareFn" required>
+        <div class="alx-maintain-item-label"> <ion-icon name="ios-list-box" item-start></ion-icon>维修内容</div>
+        <ion-select [(ngModel)]="order.serviceCodeL3" okText="确定" cancelText="取消" name="serviceCodeL3" required>
             <ion-option *ngFor="let item of serviceItem" [value]="item.code">{{ item.serviceName }}</ion-option>
-        </ion-select>-->
+        </ion-select>
     </div>
     <div class="alx-maintain-item">
-        <div class="alx-maintain-item-label">预约时间</div>
-        <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [min]="minDate" [max]="maxDate" [(ngModel)]="order.appointmentTimeStart" name="appointmentTimeStart" doneText="确定" cancelText="取消"></ion-datetime>
+        <div class="alx-maintain-item-label"><ion-icon name="ios-calendar" item-start></ion-icon>预约时间</div>
+        <ion-datetime class="basic" displayFormat="YYYY/MM/DD HH:00"  pickerFormat="YYYY MMMM DD  HH" [monthNames]="months" [min]="minDate" [max]="maxDate" [(ngModel)]="order.appointmentTimeStart" placeholder="----/--/--  --"name="appointmentTimeStart" doneText="确定" cancelText="取消" required></ion-datetime>
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
     </div>
     <div class="alx-maintain-item">
-        <div class="alx-maintain-item-title">问题描述</div>
+        <div class="alx-maintain-item-title"><ion-icon name="ios-clipboard" item-start></ion-icon>问题描述</div>
         <div class="alx-maintain-item-content">
           <ion-textarea autosize="200" (contentCount)="getContentCount($event)" [(ngModel)]="order.description" name="description">
 
@@ -26,7 +31,7 @@
         </div>
     </div>
     <ion-footer>
-        <button ion-button block color="basic" type="submit">报修</button>
+        <button ion-button block color="basic" type="submit">提交报修单</button>
     </ion-footer>
   </form>
 </ion-content>

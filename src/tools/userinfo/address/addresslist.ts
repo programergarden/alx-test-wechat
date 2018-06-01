@@ -1,16 +1,16 @@
 import {Component} from "@angular/core";
-import {App, NavController} from "ionic-angular";
 import {UserAddressPage} from "./address";
+import {AppService} from "../../../app/app.service";
 
 @Component({
   selector: 'page-address-list',
   templateUrl: 'addresslist.html'
 })
 export class UserAddressList {
-  constructor(public navCtrl: NavController, public appCtrl: App){}
+  constructor(public appService: AppService){}
 
   goToAddress(id: number) {
-    this.appCtrl.getRootNav().push(UserAddressPage,{data:id});
+      this.appService.router(UserAddressPage,{data:id});
   }
 }
 

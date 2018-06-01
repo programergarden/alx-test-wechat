@@ -1,14 +1,17 @@
 import { NgModule, ErrorHandler, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { registerLocaleData } from "@angular/common";
-import localeCN from '@angular/common/locales/zh-Hans';
-import localExtraCN from '@angular/common/locales/extra/zh-Hans';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicPageModule, IonicModule, IonicErrorHandler, IonicApp } from 'ionic-angular';
 import { FormsModule } from "@angular/forms";
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { registerLocaleData } from "@angular/common";
+import localeZhCN from "@angular/common/locales/zh-Hans";
+import localeZhCNExtra from "@angular/common/locales/extra/zh-Hans";
 
+import { PayPage } from "../pages/pay/pay";
+import { ConfirmPage } from "../pages/confirm/confirm";
+import { CommonPage } from "../pages/common/common";
 import { MaintainPage } from '../pages/maintain/maintain';
 import { CategoryPage } from "../pages/category/category";
 import { HomePage } from '../pages/home/home';
@@ -21,51 +24,62 @@ import { BaseServices } from "../services/BaseServices";
 import { OrdersService } from "../services/OrdersService";
 import { AppGlobal, AppService } from "./app.service";
 import { AutosizetextareaDirective } from "../until/autosizetextarea/autosizetextarea";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-registerLocaleData(localeCN,'zh-Hans',localExtraCN);
+
+registerLocaleData(localeZhCN, 'zh_Hans', localeZhCNExtra);
 
 @NgModule({
   declarations: [
-    MyApp,
-    MaintainPage,
-    CategoryPage,
-    HomePage,
-    TabsPage,
-    AlxListView,
-    AutosizetextareaDirective
+      MyApp,
+      MaintainPage,
+      PayPage,
+      ConfirmPage,
+      CommonPage,
+      CategoryPage,
+      HomePage,
+      TabsPage,
+      AlxListView,
+      AutosizetextareaDirective
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    UserinfoModule,
-    HttpClientModule,
-    IonicModule.forRoot(MyApp,{
-        backButtonText: '返回',
-    })
+      BrowserModule,
+      FormsModule,
+      UserinfoModule,
+      HttpClientModule,
+      BrowserAnimationsModule,
+      IonicModule.forRoot(MyApp,{
+          backButtonText: '返回',
+      }),
+      IonicPageModule.forChild(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    MaintainPage,
-    CategoryPage,
-    HomePage,
-    TabsPage,
-    AlxListView
+      MyApp,
+      MaintainPage,
+      PayPage,
+      ConfirmPage,
+      CommonPage,
+      CategoryPage,
+      HomePage,
+      TabsPage,
+      AlxListView
   ],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+      CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
-    CategoriesService,
-    BaseServices,
-    OrdersService,
-    AppService,
-    AppGlobal,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: LOCALE_ID, useValue:'zh-Hans'}
+      StatusBar,
+      SplashScreen,
+      CategoriesService,
+      BaseServices,
+      OrdersService,
+      AppService,
+      AppGlobal,
+      { provide: ErrorHandler, useClass: IonicErrorHandler },
+      { provide: LOCALE_ID, useValue:'zh_Hans' }
   ]
 })
 export class AppModule {
+
 }

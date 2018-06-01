@@ -25,23 +25,23 @@
             <ion-icon name="ios-clipboard"></ion-icon>我的订单
         </ion-card-header>
         <ion-card-content class="card-content card-content-ios ">
-            <span class="alx-card-order-basic" (click)="goToOrders('nopay')">
+            <span class="alx-card-order-basic" (click)="goToOrders('-1')">
                <ion-icon name="ios-bookmarks"></ion-icon>
                <span class="alx-card-order-text">待付款</span>
             </span>
-            <span class="alx-card-order-basic" (click)="goToOrders('having')">
+            <span class="alx-card-order-basic" (click)="goToOrders('1')">
                <ion-icon name="ios-browsers"></ion-icon>
                <span class="alx-card-order-text">进行中</span>
             </span>
-            <span class="alx-card-order-basic" (click)="goToOrders('finished')">
+            <span class="alx-card-order-basic" (click)="goToOrders('2')">
                <ion-icon name="ios-briefcase"></ion-icon>
                <span class="alx-card-order-text">已完成</span>
             </span>
-            <span class="alx-card-order-other" (click)="goToOrders('all')">
+            <span class="alx-card-order-other" (click)="goToOrders('0')">
                <ion-icon name="ios-calendar"></ion-icon>
                <span class="alx-card-order-text">我的报修</span>
             </span>
-            <span class="alx-card-order-other" (click)="goToService(0)">
+            <span class="alx-card-order-other" (click)="goToService()">
                <ion-icon name="ios-chatboxes"></ion-icon>
                <span class="alx-card-order-text">退款/售后</span>
             </span>
@@ -54,7 +54,7 @@
       <ion-card-content class="card-content card-content-ios ">
           <ion-item>
               <ion-label>客服热线</ion-label>
-              <ion-label color="basic" (click)="callMe()">400-8594-110</ion-label>
+              <ion-label color="basic" (click)="appService.callMe()">400-8594-110</ion-label>
           </ion-item>
       </ion-card-content>
     </ion-card>

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar [color]="'basic'">
-    <ion-title>报修</ion-title>
+    <ion-title>我的资料</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
@@ -9,8 +9,10 @@
         <ion-avatar item-start>
           <img src="{{ user.headimgurl || '/assets/imgs/icon.png'}}">
         </ion-avatar>
-        <h2>{{ user.nickname || 'Alxiu Test'}} </h2>
-        <ion-icon name="" item-end></ion-icon>
+        <div (click)="goToProfileDetail()">
+          <h2>{{ user.nickname || 'Alxiu Test'}} </h2>
+          <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+        </div>
       </ion-item>
   </ion-list>
 </ion-content>

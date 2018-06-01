@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.9.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>alx-wechat</name>
-    <description>ALXIU wechat app</description>
+<widget id="com.alxiu.repairApp" version="0.9.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>阿里修客户端</name>
+    <description>阿里修客户端app 测试版</description>
     <author email="zhaowc@alxiu.com" href="http://alxiu.com/">Wicho Chiu @ ALXIU</author>
     <content src="index.html" />
     <access origin="*" />
@@ -81,4 +81,5 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="2.0.5" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

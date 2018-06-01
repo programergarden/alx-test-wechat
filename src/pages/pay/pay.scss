@@ -1,0 +1,39 @@
+page-pay {
+    .alxiu-wechat-product-list {
+      margin: 10px 15px;
+    }
+    .alxiu-wechat-product {
+        font-size: 1.5rem;
+        text-align: right;
+        margin: 0;
+        width: 100%;
+        padding: 6px 8px;
+    }
+    .alxiu-wechat-product.alxiu-wechat-actived{
+        border: 1px solid #ea5414;
+    }
+  .alxiu-wechat-product.alxiu-wechat-actived,
+  .alxiu-product-price span{
+      color: #ea5414;
+      font-weight: 600;
+  }
+  .alxiu-product-price span {
+    padding: 6px 8px;
+    font-size: 2rem;
+  }
+
+  .alxiu-buttons {
+    margin-top:20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+   ion-footer{
+     text-align: center;
+     color: #696969;
+   }
+  ion-footer span{
+    font-weight: 600;
+    color: #ea5414;
+  }
+}

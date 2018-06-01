@@ -27,7 +27,7 @@ alx-address-picker {
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
-    max-width: 66px;
+    max-width: 33%;
   }
   .alx-address-picker-select ion-icon {
     font-size: 22px;
@@ -58,9 +58,17 @@ alx-address-picker {
     justify-content: flex-end;
     padding: 5px 10px;
   }
+
+  .alx-address-picker-title{
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: center;
+      width: 100%;
+      color: #383838;
+  }
+
   ion-segment {
-    margin-bottom: 3px;
-    border-bottom:1px solid #ea5414;
+      margin-bottom: 3px;
   }
   .segment-ios-basic .segment-button {
     border:none;

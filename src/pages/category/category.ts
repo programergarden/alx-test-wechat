@@ -1,7 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {App, NavController} from 'ionic-angular';
-import {AppGlobal, AppService} from "../../app/app.service";
-import {MaintainPage} from "../maintain/maintain";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AppGlobal, AppService } from "../../app/app.service";
+import { MaintainPage } from "../maintain/maintain";
 
 
 @Component({
@@ -13,24 +12,24 @@ export class CategoryPage implements OnInit{
   searchData: any[];
   dataList: any;
 
-  constructor(public navCtrl: NavController,public appService: AppService, public appCtrl: App) {
+  constructor(public appService: AppService) {
   }
 
   filterItem(ev: any) {
-    let filterVal = ev.target.value;
-    if(filterVal && ''!== filterVal.trim() && this.dataList && this.dataList.length > 0 ) {
-      this.searchData = this.dataList.filter(item => {
-          return (item.serviceName.indexOf(filterVal)>-1);
-      });
-    }else if('' == filterVal || 'undefined' === typeof filterVal){
-        this.searchData = null;
-    } else {
-        this.searchData = [];
-    }
+      let filterVal = ev.target.value;
+      if(filterVal && ''!== filterVal.trim() && this.dataList && this.dataList.length > 0 ) {
+        this.searchData = this.dataList.filter(item => {
+            return (item.serviceName.indexOf(filterVal)>-1);
+        });
+      }else if('' == filterVal || 'undefined' === typeof filterVal){
+          this.searchData = null;
+      } else {
+          this.searchData = [];
+      }
   }
 
   goToMaintain(ev: any) {
-      this.appCtrl.getRootNav().push(MaintainPage,{ data: ev });
+      this.appService.router(MaintainPage,{ data: ev });
   }
 
   /*doInfinite(): Promise<any> {

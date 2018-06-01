@@ -1,8 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {App, NavController} from 'ionic-angular';
-import {UserOrdersPage} from "./orders/orders";
-import {AppGlobal, AppService} from "../../app/app.service";
-import {UserProfilePage} from "./profile/userprofile";
+import { Component, OnInit } from "@angular/core";
+import { UserOrdersPage } from "./orders/orders";
+import { AppGlobal, AppService } from "../../app/app.service";
+import { UserProfilePage } from "./profile/userprofile";
 
 @Component({
   selector: 'userinfo-page',
@@ -14,7 +13,7 @@ export class UserComponent implements OnInit{
   gender: string;
   genderColor: string;
 
-  constructor(public navCtrl: NavController, public appCtrl: App, public appService: AppService){}
+  constructor(public appService: AppService){}
 
   ngOnInit(){
       this.user = this.appService.getItem(AppGlobal.cache.userInfo);
@@ -23,7 +22,7 @@ export class UserComponent implements OnInit{
   }
 
   goToOrders(type: string){
-      this.appCtrl.getRootNav().push(UserOrdersPage,{status:type});
+      this.appService.router(UserOrdersPage,{status:type});
   }
 
   goToService() {
@@ -31,10 +30,6 @@ export class UserComponent implements OnInit{
   }
 
   goToSetting(){
-      this.appCtrl.getRootNav().push(UserProfilePage,{data:this.user});
-  }
-
-  callMe() {
-      window.location.href = "tel://4008594110";
+      this.appService.router(UserProfilePage,{data:this.user});
   }
 }
